@@ -1,0 +1,18 @@
+C:\Users\Andrew\Desktop\newHayosiko\OffroadHayosiko\OffroadHayosiko\bin\Debug\OffroadHayosiko.dll
+C:\Users\Andrew\Desktop\newHayosiko\OffroadHayosiko\OffroadHayosiko\bin\Debug\OffroadHayosiko.pdb
+C:\Users\Andrew\Desktop\newHayosiko\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\newHayosiko\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.dll
+C:\Users\Andrew\Desktop\newHayosiko\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.pdb
+C:\Users\Andrew\Desktop\newHayosiko\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.csprojAssemblyReference.cache
+D:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\bin\Debug\OffroadHayosiko.dll
+D:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\bin\Debug\OffroadHayosiko.pdb
+D:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.csprojAssemblyReference.cache
+D:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.csproj.CoreCompileInputs.cache
+D:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.dll
+D:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.pdb
+F:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\bin\Debug\OffroadHayosiko.dll
+F:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\bin\Debug\OffroadHayosiko.pdb
+F:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.csproj.CoreCompileInputs.cache
+F:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.dll
+F:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.pdb
+F:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Debug\OffroadHayosiko.csprojAssemblyReference.cache

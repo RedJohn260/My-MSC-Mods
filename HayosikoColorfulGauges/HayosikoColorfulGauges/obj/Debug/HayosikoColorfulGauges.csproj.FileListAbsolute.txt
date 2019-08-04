@@ -1,0 +1,5 @@
+F:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Debug\HayosikoColorfulGauges.dll
+F:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Debug\HayosikoColorfulGauges.pdb
+F:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Debug\HayosikoColorfulGauges.csproj.CoreCompileInputs.cache
+F:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Debug\HayosikoColorfulGauges.dll
+F:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Debug\HayosikoColorfulGauges.pdb

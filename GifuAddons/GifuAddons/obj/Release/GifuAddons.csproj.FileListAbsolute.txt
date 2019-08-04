@@ -1,0 +1,3 @@
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\bin\Release\GifuAddons.dll
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuAddons.csproj.CoreCompileInputs.cache
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuAddons.dll

@@ -1,0 +1,8 @@
+F:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\bin\Release\RusckoOverhaul.dll
+F:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.csproj.CoreCompileInputs.cache
+F:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.dll
+F:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.csprojAssemblyReference.cache
+H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\bin\Release\RusckoOverhaul.dll
+H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.csproj.CoreCompileInputs.cache
+H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.dll
+H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.csprojAssemblyReference.cache

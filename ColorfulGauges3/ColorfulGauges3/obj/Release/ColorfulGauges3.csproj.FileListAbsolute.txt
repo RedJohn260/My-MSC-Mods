@@ -1,0 +1,12 @@
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\bin\Release\ColorfulGauges3.dll
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csproj.CoreCompileInputs.cache
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.dll
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csprojAssemblyReference.cache
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGG\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\bin\Release\ColorfulGauges3.dll
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGG\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csprojAssemblyReference.cache
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGG\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csproj.CoreCompileInputs.cache
+C:\Users\RedJo\OneDrive\Desktop\ColorfulGG\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.dll
+C:\Users\RedJo\OneDrive\Desktop\Visual\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\bin\Release\ColorfulGauges3.dll
+C:\Users\RedJo\OneDrive\Desktop\Visual\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csprojAssemblyReference.cache
+C:\Users\RedJo\OneDrive\Desktop\Visual\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csproj.CoreCompileInputs.cache
+C:\Users\RedJo\OneDrive\Desktop\Visual\ColorfulGauges3.0\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.dll

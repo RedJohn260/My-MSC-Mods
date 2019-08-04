@@ -1,0 +1,6 @@
+F:\C# Projects\GifuGauges\GifuGauges\GifuGauges\bin\Release\GifuGauges.dll
+F:\C# Projects\GifuGauges\GifuGauges\GifuGauges\obj\Release\GifuGauges.csproj.CoreCompileInputs.cache
+F:\C# Projects\GifuGauges\GifuGauges\GifuGauges\obj\Release\GifuGauges.dll
+H:\C# Projects\GifuGauges\GifuGauges\GifuGauges\bin\Release\GifuGauges.dll
+H:\C# Projects\GifuGauges\GifuGauges\GifuGauges\obj\Release\GifuGauges.csproj.CoreCompileInputs.cache
+H:\C# Projects\GifuGauges\GifuGauges\GifuGauges\obj\Release\GifuGauges.dll

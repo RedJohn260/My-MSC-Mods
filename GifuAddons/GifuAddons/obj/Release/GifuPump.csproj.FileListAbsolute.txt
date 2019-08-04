@@ -1,0 +1,8 @@
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\bin\Release\GifuPump.dll
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.csproj.CoreCompileInputs.cache
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.dll
+F:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.csprojAssemblyReference.cache
+H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\bin\Release\GifuPump.dll
+H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.csproj.CoreCompileInputs.cache
+H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.dll
+H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.csprojAssemblyReference.cache
