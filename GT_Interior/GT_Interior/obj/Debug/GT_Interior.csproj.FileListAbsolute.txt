@@ -1,0 +1,17 @@
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\GT_Interior.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\GT_Interior.pdb
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\obj\Debug\GT_Interior.csproj.CoreCompileInputs.cache
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\obj\Debug\GT_Interior.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\obj\Debug\GT_Interior.pdb
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\MSCLoader.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\UnityEngine.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\NAudio.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\NVorbis.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\UnityEngine.UI.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\Newtonsoft.Json.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\Mono.Security.dll
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\MSCLoader.pdb
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\obj\Debug\GT_Interior.csproj.CopyComplete
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\obj\Debug\GT_Interior.csprojAssemblyReference.cache
+C:\Users\RedJo\OneDrive\Desktop\GT Interior\Visual\GT_Interior\GT_Interior\bin\Debug\System.Runtime.Serialization.dll
