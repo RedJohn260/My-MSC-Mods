@@ -1,4 +1,3 @@
 H:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\bin\Release\OffroadHayosiko.dll
-H:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Release\OffroadHayosiko.csprojAssemblyReference.cache
 H:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Release\OffroadHayosiko.csproj.CoreCompileInputs.cache
 H:\C# Projects\OffRoad Hayosiko\newHayosikoVisual studio\OffroadHayosiko\OffroadHayosiko\obj\Release\OffroadHayosiko.dll

@@ -2,3 +2,7 @@ F:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\bin\Relea
 F:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\obj\Release\OffroadHayosikoL.csproj.CoreCompileInputs.cache
 F:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\obj\Release\OffroadHayosikoL.dll
 F:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\obj\Release\OffroadHayosikoL.csprojAssemblyReference.cache
+H:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\bin\Release\OffroadHayosikoL.dll
+H:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\obj\Release\OffroadHayosikoL.csproj.CoreCompileInputs.cache
+H:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\obj\Release\OffroadHayosikoL.dll
+H:\C# Projects\Offroad Hayosiko Load\OffroadHayosikoL\OffroadHayosikoL\obj\Release\OffroadHayosikoL.csprojAssemblyReference.cache

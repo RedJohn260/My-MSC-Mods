@@ -10,7 +10,7 @@ namespace OffroadHayosikoL
         public override string ID => "OffroadHayosikoL"; //Your mod ID (unique)
         public override string Name => "OffroadHayosikoL"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "1.0"; //Version
+        public override string Version => "1.2"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
@@ -27,7 +27,7 @@ namespace OffroadHayosikoL
         private float b = 1f;
         private bool showgui;
         private string path;
-        private Rect guiBox = new Rect((float)(Screen.width - 2500 / 2), 70f, 600f, 440f);
+        private Rect guiBox = new Rect((float)(Screen.width - 2500 / 2), 70f, 600f, 600f);
         private readonly Keybind openGUI = new Keybind("ShowGUI", "ShowGUI", KeyCode.Keypad3);
         private Color matColor;
         private Color vanColor;
@@ -80,7 +80,16 @@ namespace OffroadHayosikoL
         private Material doorOpener1Mat;
         private Material doorOpener2Mat;
         private bool SwitchControll;
-
+        public float hight = 0.1f;
+        private Transform whFL;
+        private Transform whFR;
+        private Transform whRL;
+        private Transform whRR;
+        private Transform w1;
+        private Transform w2;
+        private Transform w3;
+        private Transform w4;
+        private float width = 1.3f;
 
         public override void OnLoad()
         {
@@ -181,6 +190,17 @@ namespace OffroadHayosikoL
             GameObject.Find("HAYOSIKO(1500kg, 250)/wheelRL/tire/tire").GetComponent<MeshRenderer>().enabled = false;
             GameObject.Find("HAYOSIKO(1500kg, 250)/wheelRR/tire/tire").GetComponent<MeshRenderer>().enabled = false;
 
+            whFL = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelFL").transform;
+            whFR = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelFR").transform;
+            whRL = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelRL").transform;
+            whRR = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelRR").transform;
+
+            w1 = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelFL/tire").transform;
+            w2 = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelFR/tire").transform;
+            w3 = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelRL/tire").transform;
+            w4 = GameObject.Find("HAYOSIKO(1500kg, 250)/wheelRR/tire").transform;
+
+           
             ModConsole.Print("<b><color=green>OffRoad Hayosiko Mod Loaded</color></b>");
 
         }
@@ -472,7 +492,7 @@ namespace OffroadHayosikoL
             if (this.showgui)
             {
                 GUI.backgroundColor = new Color(0, 00f, 0.00f, 0.55f);
-                GUI.ModalWindow(1, this.guiBox, new GUI.WindowFunction(this.Window), "Hayosiko Color");
+                GUI.ModalWindow(1, this.guiBox, new GUI.WindowFunction(this.Window), "Offroad Hayosiko by RedJohn260");
             }
         }
         private void Window(int windowid)
@@ -506,8 +526,14 @@ namespace OffroadHayosikoL
             vanb = GUI.HorizontalSlider(new Rect(330f, 115f, 250f, 20f), vanb, 0, 1);
             //--------------------------------------------------------------------------------------
 
+            // VAn Hight
+            GUI.Label(new Rect(230f, 440f, 350f, 25f), "Van Wheel Hight");
+            hight = GUI.HorizontalSlider(new Rect(150f, 470f, 250f, 20f), hight, 0.1f, -0.1f);
+            GUI.Label(new Rect(230f, 490f, 380f, 25f), "Van Wheel Width");
+            width = GUI.HorizontalSlider(new Rect(150f, 520f, 250f, 20f), width, 1f, 1.5f);
 
-           
+
+
             if (GUI.Button(new Rect(355f, 390f, 150f, 40f), "Close"))
             {
                 this.showgui = !this.showgui;
@@ -556,7 +582,7 @@ namespace OffroadHayosikoL
         }
         private void Savesettings()
         {
-            string[] str = new string[6];
+            string[] str = new string[8];
             int num = 0;
             float StoreRedB = this.r;
             str[num] = StoreRedB.ToString();
@@ -575,12 +601,18 @@ namespace OffroadHayosikoL
             int num5 = 5;
             float StoreBlueN = this.vanb;
             str[num5] = StoreBlueN.ToString();
+            int num6 = 6;
+            float StoreWheelH = this.hight;
+            str[num6] = StoreWheelH.ToString();
+            int num7 = 7;
+            float StoreWheelW = this.width;
+            str[num7] = StoreWheelW.ToString();
 
             File.WriteAllLines(string.Concat(this.path, "/HayosikoOffroadColor.txt"), str);
         }
         private void Loadsettings()
         {
-            string[] strArrays = new string[6];
+            string[] strArrays = new string[8];
 
             strArrays = File.ReadAllLines(string.Concat(this.path, "/HayosikoOffroadColor.txt"));
             this.r = float.Parse(strArrays[0]);
@@ -589,6 +621,8 @@ namespace OffroadHayosikoL
             this.vanr = float.Parse(strArrays[3]);
             this.vang = float.Parse(strArrays[4]);
             this.vanb = float.Parse(strArrays[5]);
+            this.hight = float.Parse(strArrays[6]);
+            this.width = float.Parse(strArrays[7]);
         }
         private void EnableDisableButtons()
         {
@@ -629,6 +663,34 @@ namespace OffroadHayosikoL
             backDoorMat.SetColor("_Color", vanColor);
             matColor = new Color(r, g, b);
             vanColor = new Color(vanr, vang, vanb);
+
+            Vector3 localPosition = whFL.localPosition;
+            localPosition.y = hight;
+            whFL.localPosition = localPosition;
+
+            Vector3 localPosition1 = whFR.localPosition;
+            localPosition1.y = hight;
+            whFR.localPosition = localPosition1;
+
+            Vector3 localPosition2 = whRL.localPosition;
+            localPosition2.y = hight;
+            whRL.localPosition = localPosition2;
+
+            Vector3 localPosition3 = whRR.localPosition;
+            localPosition3.y = hight;
+            whRR.localPosition = localPosition3;
+            Vector3 localScale1 = w1.localScale;
+            localScale1.x = width;
+            w1.localScale = localScale1;
+            Vector3 localScale2 = w2.localScale;
+            localScale2.x = width;
+            w2.localScale = localScale2;
+            Vector3 localScale3 = w3.localScale;
+            localScale3.x = width;
+            w3.localScale = localScale3;
+            Vector3 localScale4 = w4.localScale;
+            localScale4.x = width;
+            w4.localScale = localScale4;
         }
     }
 }
