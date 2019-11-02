@@ -1,0 +1,64 @@
+ManifestFileVersion: 0
+CRC: 2404055166
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a05b025578c4983465755f5e78e60137
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460727eb2df9837e2e407c7370a6a6ab
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Textures/rpm_gauge.png
+- Assets/Textures
+- Assets/Materials/TachoNeedle.mat
+- Assets/Textures/needle_green_glow.png
+- Assets/Materials/clockGauge.mat
+- Assets/Scripts/CreateAssetBundles.cs
+- Assets/Objects/speedo_gauges.obj
+- Assets/Materials/ExtraGauges.mat
+- Assets/Textures/small_needle_glow.png
+- Assets/Materials
+- Assets/Textures/extra_gauges.png
+- Assets/Textures/tachometer_gauge_needle_glow.png
+- Assets/Prefabs
+- Assets/Objects/dashboard_gauge_panel_rpm.obj
+- Assets/Prefabs/speedo_gauges.prefab
+- Assets/Materials/Tachometer.mat
+- Assets/Objects/dashboard_gauge_panel_clock.obj
+- Assets/Textures/extra_gauges_glow_white.png
+- Assets/Textures/rpm_gauge_glow.png
+- Assets/Textures/tachometer_gauge.png
+- Assets/Materials/SmallNeedle.mat
+- Assets/Textures/satsuma_dash_gauges_fliped.png
+- Assets/Prefabs/rpm_gauge.prefab
+- Assets/Materials/SpedometerGauge.mat
+- Assets/Objects
+- Assets/Textures/tachometer_gauge_white.png
+- Assets/Prefabs/clock_gauge.prefab
+- Assets/Materials/rpmGauge.mat
+- Assets/Materials/GreenNeedle.mat
+- Assets/Textures/satsuma_dash_gauges.png
+- Assets/Textures/odometer.png
+- Assets/Textures/satsuma_dash_gauges_glow.png
+- Assets/Materials/Odometer.mat
+Dependencies: []
