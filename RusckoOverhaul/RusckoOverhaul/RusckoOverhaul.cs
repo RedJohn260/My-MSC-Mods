@@ -9,7 +9,7 @@ namespace RusckoOverhaul
         public override string ID => "RusckoOverhaul"; //Your mod ID (unique)
         public override string Name => "RusckoOverhaul"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "0.3"; //Version
+        public override string Version => "0.4"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
@@ -67,14 +67,16 @@ namespace RusckoOverhaul
         Settings TCS = new Settings("TCS", "TCS ON/OFF", true);
         Settings AWD = new Settings("AWD", "AWD ON/OFF", true);
         Settings Ratio = new Settings("slider1", "Gear Ratio",6.2f);
+        private GameObject gameObject;
+        private GameObject gameObject1;
 
 
         public override void OnLoad()
         {
             ab = LoadAssets.LoadBundle(this, "ruscko.unity3d");
             body = GameObject.Instantiate(ab.LoadAsset("rusckoBody.prefab")) as GameObject;
-            doorL= GameObject.Instantiate(ab.LoadAsset("doorLeft.prefab")) as GameObject;
-            doorR = GameObject.Instantiate(ab.LoadAsset("doorRight.prefab")) as GameObject;
+            doorL= ab.LoadAsset("doorLeft.prefab") as GameObject;
+            doorR = ab.LoadAsset("doorRight.prefab") as GameObject;
             interior = GameObject.Instantiate(ab.LoadAsset("rusckoInterior.prefab")) as GameObject;
             doorRear = GameObject.Instantiate(ab.LoadAsset("doorRear.prefab")) as GameObject;
             rimFL = GameObject.Instantiate(ab.LoadAsset("rim.prefab")) as GameObject;
@@ -103,6 +105,11 @@ namespace RusckoOverhaul
             reardoor = ab.LoadAsset("reardoor.mat") as Material;
             gauges = GameObject.Instantiate(ab.LoadAsset("gauges.prefab")) as GameObject;
             ab.Unload(false);
+
+            gameObject = Object.Instantiate(doorR);
+            Object.Destroy(gameObject);
+            gameObject1 = Object.Instantiate(doorL);
+            Object.Destroy(gameObject1);
 
             //bee hive
             Hive = GameObject.Find("RCO_RUSCKO12(270)/WaspHive");

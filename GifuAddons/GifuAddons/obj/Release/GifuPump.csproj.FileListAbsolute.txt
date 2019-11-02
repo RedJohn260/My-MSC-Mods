@@ -6,3 +6,5 @@ H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\bin\Release\Gif
 H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.csproj.CoreCompileInputs.cache
 H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.dll
 H:\C# Projects\GifuAddons\GifuAddonsVisual\GifuAddons\GifuAddons\obj\Release\GifuPump.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\GifuAddons\GifuAddons\obj\Release\GifuPump.dll
+Z:\LocalGit\My-MSC-Mods\GifuAddons\GifuAddons\bin\Release\GifuPump.dll

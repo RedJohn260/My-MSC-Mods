@@ -1,0 +1,13 @@
+D:\newTextures\Jerrycan\Final\Kanister\Kanister\bin\Release\Kanister.dll
+D:\newTextures\Jerrycan\Final\Kanister\Kanister\obj\Release\Kanister.csproj.CoreCompileInputs.cache
+D:\newTextures\Jerrycan\Final\Kanister\Kanister\obj\Release\Kanister.dll
+D:\newTextures\Jerrycan\Final\Kanister\Kanister\obj\Release\Kanister.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\Jerrycan\Kanister\bin\Release\Kanister.dll
+Z:\LocalGit\My-MSC-Mods\Jerrycan\Kanister\bin\Release\PlayMaker.dll
+Z:\LocalGit\My-MSC-Mods\Jerrycan\Kanister\obj\Release\Kanister.csproj.CopyComplete
+Z:\LocalGit\My-MSC-Mods\Jerrycan\Kanister\obj\Release\Kanister.dll
+Z:\LocalGit\My-MSC-Mods\NewJerrycan\Source\Jerrycan\Kanister\bin\Release\Kanister.dll
+Z:\LocalGit\My-MSC-Mods\NewJerrycan\Source\Jerrycan\Kanister\bin\Release\PlayMaker.dll
+Z:\LocalGit\My-MSC-Mods\NewJerrycan\Source\Jerrycan\Kanister\obj\Release\Kanister.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\NewJerrycan\Source\Jerrycan\Kanister\obj\Release\Kanister.csproj.CopyComplete
+Z:\LocalGit\My-MSC-Mods\NewJerrycan\Source\Jerrycan\Kanister\obj\Release\Kanister.dll

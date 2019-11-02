@@ -6,3 +6,5 @@ H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\bin\Release\Rus
 H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.csproj.CoreCompileInputs.cache
 H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.dll
 H:\C# Projects\Ruscko\RusckoVisual\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\RusckoOverhaul\RusckoOverhaul\bin\Release\RusckoOverhaul.dll
+Z:\LocalGit\My-MSC-Mods\RusckoOverhaul\RusckoOverhaul\obj\Release\RusckoOverhaul.dll

@@ -9,7 +9,7 @@ namespace GifuAddons
         public override string ID => "GifuPump"; //Your mod ID (unique)
         public override string Name => "GifuPump"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "1.3"; //Version
+        public override string Version => "1.5"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
@@ -49,6 +49,7 @@ namespace GifuAddons
         private GameObject leaver;
         private GameObject drzac;
         private Material handleMat;
+        private GameObject gameObject;
         
 
 
@@ -73,7 +74,7 @@ namespace GifuAddons
             switchH = GameObject.Instantiate(ab.LoadAsset("switchH.prefab")) as GameObject;
             switchSwitch = GameObject.Instantiate(ab.LoadAsset("switchSwitch.prefab")) as GameObject;
             panel = GameObject.Instantiate(ab.LoadAsset("panel.prefab")) as GameObject;
-            leaver = GameObject.Instantiate(ab.LoadAsset("handle.prefab")) as GameObject;
+            leaver = ab.LoadAsset("handle.prefab") as GameObject;
             drzac = GameObject.Instantiate(ab.LoadAsset("drzac.prefab")) as GameObject;
             handleMat = ab.LoadAsset("handle.mat") as Material;
             ab.Unload(false);
@@ -83,6 +84,8 @@ namespace GifuAddons
         {
             GIFU = GameObject.Find("GIFU(750/450psi)/MESH");
 
+            gameObject = Object.Instantiate(leaver);
+            Object.Destroy(gameObject);
 
             kutija.transform.SetParent(GIFU.transform, false);
            

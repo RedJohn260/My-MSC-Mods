@@ -34,15 +34,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>E:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MSCLoader">
-      <HintPath>E:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\MSCLoader.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\MSCLoader.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PlayMaker">
-      <HintPath>E:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\PlayMaker.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\PlayMaker.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -52,7 +52,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>E:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -63,7 +63,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-copy $(TargetPath) "E:\SteamLibrary\steamapps\common\My Summer Car\Mods" /y
-copy "$(TargetDir)$(TargetName).dll" "E:\SteamLibrary\steamapps\common\My Summer Car\Mods" /y</PostBuildEvent>
+copy $(TargetPath) "D:\SteamLibrary\steamapps\common\My Summer Car\Mods" /y
+copy "$(TargetDir)$(TargetName).dll" "D:\SteamLibrary\steamapps\common\My Summer Car\Mods" /y</PostBuildEvent>
   </PropertyGroup>
 </Project>
