@@ -32,6 +32,8 @@ namespace JonnezRlight
         private PlayMakerFSM PlayMakerFSM;
         private FsmBool lightsON;
         private GameObject plate;
+        private GameObject nosac;
+        private GameObject svijetlo_nosac;
 
 
         public override void OnNewGame()
@@ -44,9 +46,11 @@ namespace JonnezRlight
             ab = LoadAssets.LoadBundle(this, "rlight.unity3d");
             lightOff = GameObject.Instantiate( ab.LoadAsset("light_off.prefab")) as GameObject;
             lightOn = GameObject.Instantiate( ab.LoadAsset("light_on.prefab")) as GameObject;
-            lightBrake = GameObject.Instantiate( ab.LoadAsset("light_break.prefab")) as GameObject;
+            lightBrake = GameObject.Instantiate( ab.LoadAsset("light_brake.prefab")) as GameObject;
             r_spotlight = GameObject.Instantiate( ab.LoadAsset("r_spotlight.prefab")) as GameObject;
             plate = GameObject.Instantiate(ab.LoadAsset("plate.prefab")) as GameObject;
+            nosac = GameObject.Instantiate(ab.LoadAsset("nosac.prefab")) as GameObject;
+            svijetlo_nosac = GameObject.Instantiate(ab.LoadAsset("svijetlo_nosac.prefab")) as GameObject;
             ab.Unload(false);
 
 
@@ -57,6 +61,8 @@ namespace JonnezRlight
             lightBrake.transform.SetParent(JONNEZ.transform, false);
             r_spotlight.transform.SetParent(JONNEZ.transform, false);
             plate.transform.SetParent(JONNEZ.transform, false);
+            nosac.transform.SetParent(JONNEZ.transform, false);
+            svijetlo_nosac.transform.SetParent(JONNEZ.transform, false);
             lightOn.SetActive(false);
             lightBrake.SetActive(false);
 

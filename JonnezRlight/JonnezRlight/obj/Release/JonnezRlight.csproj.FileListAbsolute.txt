@@ -11,3 +11,13 @@ H:\C# Projects\JonnezRearLight\Visual\JonnezRlight\JonnezRlight\obj\Release\Jonn
 H:\C# Projects\JonnezRearLight\Visual\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.csprojAssemblyReference.cache
 H:\C# Projects\JonnezRearLight\Visual\JonnezRlight\JonnezRlight\bin\Release\JonnezRlight.dll.CodeAnalysisLog.xml
 H:\C# Projects\JonnezRearLight\Visual\JonnezRlight\JonnezRlight\bin\Release\JonnezRlight.dll.lastcodeanalysissucceeded
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\JonnezRlight.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\Assembly-CSharp.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\cInput.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\Assembly-UnityScript-firstpass.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\ES2.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\HOTween.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\Boo.Lang.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\MoodkieSecurity.dll
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.csproj.CopyComplete
+Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.dll
