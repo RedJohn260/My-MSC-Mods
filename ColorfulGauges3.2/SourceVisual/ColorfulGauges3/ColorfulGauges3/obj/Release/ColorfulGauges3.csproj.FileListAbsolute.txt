@@ -30,6 +30,6 @@ Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulG
 Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\bin\Release\Newtonsoft.Json.dll
 Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\bin\Release\System.Runtime.Serialization.dll
 Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\bin\Release\Mono.Security.dll
-Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csprojAssemblyReference.cache
 Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csproj.CopyComplete
 Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.dll
+Z:\LocalGit\My-MSC-Mods\ColorfulGauges3.2\SourceVisual\ColorfulGauges3\ColorfulGauges3\obj\Release\ColorfulGauges3.csprojAssemblyReference.cache

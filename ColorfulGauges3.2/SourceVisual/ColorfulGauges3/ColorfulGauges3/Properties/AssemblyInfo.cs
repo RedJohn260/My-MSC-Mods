@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ColorfulGauges3")]
-[assembly: AssemblyDescription("ColorfulGauges3.0 Mod for My summer car")]
+[assembly: AssemblyDescription("ColorfulGauges3.2 Mod for My summer car")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("RedJohn260")]
 [assembly: AssemblyProduct("ColorfulGauges3")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("Copyright © RedJohn260")]
 [assembly: AssemblyCulture("")]
 
@@ -33,4 +33,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.2.0.0")]
