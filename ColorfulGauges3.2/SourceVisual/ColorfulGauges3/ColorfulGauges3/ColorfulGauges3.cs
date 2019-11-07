@@ -171,7 +171,7 @@ namespace ColorfulGauges3
                             ExtraGauges.mainTexture = LoadAssets.LoadTexture(this, "textures/diffuse_extra.png");
                             SmallNeedle.mainTexture = LoadAssets.LoadTexture(this, "textures/diffuse_speedo.png");
                             GreenNeedle.mainTexture = LoadAssets.LoadTexture(this, "textures/diffuse_extra.png");
-                            Odometer.mainTexture = LoadAssets.LoadTexture(this, "textures/diffuse_speedo.png");
+                            Odometer.mainTexture = LoadAssets.LoadTexture(this, "textures/diffuse_odo.png");
                             Tachometer.mainTexture = LoadAssets.LoadTexture(this, "textures/diffuse_tacho.png");
                             // Emmit png Textures
                             speedoE = LoadAssets.LoadTexture(this, "textures/emmit_speedo.png");
