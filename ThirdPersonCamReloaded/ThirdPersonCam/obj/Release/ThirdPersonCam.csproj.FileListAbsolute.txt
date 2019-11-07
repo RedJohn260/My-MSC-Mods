@@ -1,0 +1,3 @@
+C:\Users\RedJo\OneDrive\Desktop\ThridPersonCamera(Reloaded)\ThirdPersonCam\ThirdPersonCam\obj\Release\ThirdPersonCam.csproj.CoreCompileInputs.cache
+C:\Users\RedJo\OneDrive\Desktop\ThridPersonCamera(Reloaded)\ThirdPersonCam\ThirdPersonCam\bin\Release\ThirdPersonCam(Reloaded).dll
+C:\Users\RedJo\OneDrive\Desktop\ThridPersonCamera(Reloaded)\ThirdPersonCam\ThirdPersonCam\obj\Release\ThirdPersonCam(Reloaded).dll
