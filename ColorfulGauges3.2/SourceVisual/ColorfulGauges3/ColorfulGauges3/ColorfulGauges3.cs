@@ -12,7 +12,7 @@ namespace ColorfulGauges3
         public override string ID => "ColorfulGauges3"; //Your mod ID (unique)
         public override string Name => "ColorfulGauges3"; //You mod name
         public override string Author => "RedJonh260"; //Your Username
-        public override string Version => "3.1"; //Version
+        public override string Version => "3.2"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
