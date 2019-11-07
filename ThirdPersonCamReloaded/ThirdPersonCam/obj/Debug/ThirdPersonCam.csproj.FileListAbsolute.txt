@@ -1,0 +1,4 @@
+Z:\LocalGit\My-MSC-Mods\ThirdPersonCamReloaded\ThirdPersonCam\bin\Debug\ThirdPersonCam(Reloaded).dll
+Z:\LocalGit\My-MSC-Mods\ThirdPersonCamReloaded\ThirdPersonCam\bin\Debug\ThirdPersonCam(Reloaded).pdb
+Z:\LocalGit\My-MSC-Mods\ThirdPersonCamReloaded\ThirdPersonCam\obj\Debug\ThirdPersonCam(Reloaded).dll
+Z:\LocalGit\My-MSC-Mods\ThirdPersonCamReloaded\ThirdPersonCam\obj\Debug\ThirdPersonCam(Reloaded).pdb

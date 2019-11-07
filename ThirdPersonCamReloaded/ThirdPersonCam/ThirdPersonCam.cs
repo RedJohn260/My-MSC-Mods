@@ -16,10 +16,10 @@ namespace ThirdPersonCam
         // This will create subfolder in Assets folder for your mod.
         public override bool UseAssetsFolder => true;
         private GameObject CAMERA;
-        private Keybind camera1Key = new Keybind("CameraKey1", "Reset camera", KeyCode.Alpha1, KeyCode.LeftAlt);
-        private Keybind camera2Key = new Keybind("CameraKey2", "Reset camera for Satsuma", KeyCode.Alpha2, KeyCode.LeftAlt);
-        private Keybind camera3Key = new Keybind("CameraKey3", "Camera for Satsuma", KeyCode.Alpha3, KeyCode.LeftAlt);
-        private Keybind camera4Key = new Keybind("CameraKey4", "Camera for others vehicles", KeyCode.Alpha4, KeyCode.LeftAlt);
+        private readonly Keybind camera1Key = new Keybind("CameraKey1", "Reset camera", KeyCode.Alpha1, KeyCode.LeftAlt);
+        private readonly Keybind camera2Key = new Keybind("CameraKey2", "Reset camera for Satsuma", KeyCode.Alpha2, KeyCode.LeftAlt);
+        private readonly Keybind camera3Key = new Keybind("CameraKey3", "Camera for Satsuma", KeyCode.Alpha3, KeyCode.LeftAlt);
+        private readonly Keybind camera4Key = new Keybind("CameraKey4", "Camera for others vehicles", KeyCode.Alpha4, KeyCode.LeftAlt);
         private Transform camera4;
         private float ZposO = -4.5f;
         private float XposO = 0.4f;
