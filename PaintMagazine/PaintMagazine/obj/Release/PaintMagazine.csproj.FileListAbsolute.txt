@@ -1,0 +1,2 @@
+C:\Users\Andrew\Desktop\New folder (2)\PaintMagazine\PaintMagazine\obj\Release\PaintMagazine.csprojAssemblyReference.cache
+C:\Users\Andrew\Desktop\New folder (2)\PaintMagazine\PaintMagazine\obj\Release\PaintMagazine.csproj.CoreCompileInputs.cache

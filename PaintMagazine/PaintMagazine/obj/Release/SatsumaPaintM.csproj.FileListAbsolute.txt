@@ -1,0 +1,6 @@
+C:\Users\Andrew\Desktop\New folder (2)\PaintMagazine\PaintMagazine\obj\Release\SatsumaPaintM.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\New folder (2)\PaintMagazine\PaintMagazine\bin\Release\SatsumaPaintM.dll
+C:\Users\Andrew\Desktop\New folder (2)\PaintMagazine\PaintMagazine\obj\Release\SatsumaPaintM.dll
+H:\C# Projects\PaintMagazine\PaintMagazine\PaintMagazine\bin\Release\SatsumaPaintM.dll
+H:\C# Projects\PaintMagazine\PaintMagazine\PaintMagazine\obj\Release\SatsumaPaintM.dll
+H:\C# Projects\PaintMagazine\PaintMagazine\PaintMagazine\obj\Release\SatsumaPaintM.csprojAssemblyReference.cache
