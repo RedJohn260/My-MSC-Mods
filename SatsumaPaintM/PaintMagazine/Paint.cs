@@ -83,7 +83,7 @@ namespace MSCPaintMagazine
             m_bundle = AssetBundle.CreateFromMemoryImmediate(File.ReadAllBytes(path2));
             SetupGUI();
             SetupMagazine();
-            WWW www = new WWW("https://glot.io/snippets/fhnupr92vs/raw/PMlist");
+            WWW www = new WWW("https://redjohn260.github.io/PaintjobList.txt");
             yield return www;
             string[] lines = www.text.Split(new string[2]
             {

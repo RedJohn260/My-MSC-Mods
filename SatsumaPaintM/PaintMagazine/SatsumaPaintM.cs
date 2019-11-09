@@ -13,9 +13,9 @@ namespace MSCPaintMagazine
 
         public override string Name => "SatsumaPaintM";
 
-        public override string Author => "zamp";
+        public override string Author => "RedJohn260, Zamp";
 
-        public override string Version => "0.1.2";
+        public override string Version => "0.1.3";
 
         public override bool UseAssetsFolder => true;
 
