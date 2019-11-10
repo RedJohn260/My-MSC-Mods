@@ -13,7 +13,7 @@ namespace MSCPaintMagazine
 
         public override string Name => "SatsumaPaintM";
 
-        public override string Author => "RedJohn260, Zamp";
+        public override string Author => "RedJohn260(original by: Zamp)";
 
         public override string Version => "0.1.3";
 
