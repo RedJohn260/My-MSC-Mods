@@ -314,9 +314,11 @@ namespace ColorfulGauges3
 
                         ModConsole.Print("<b><color=green>Colorful Gauges Successfully Loaded</color></b>");
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         ModConsole.Error("<b><color=red>Colorful Gauges: Problem accured in the Dashboard Meters section. Please contact the Developer of the mod for potential fix. Or submit a bug report on: 'https://www.nexusmods.com/mysummercar/mods/30'</color></b>");
+                        ModConsole.Error(ex.Message.ToString());
+                        UnityEngine.Debug.LogError(ex);
                     }
                 }
                 else

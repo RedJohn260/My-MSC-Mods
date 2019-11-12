@@ -1,0 +1,4 @@
+Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\bin\Debug\PaintBooth.dll
+Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\bin\Debug\PaintBooth.pdb
+Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Debug\PaintBooth.dll
+Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Debug\PaintBooth.pdb

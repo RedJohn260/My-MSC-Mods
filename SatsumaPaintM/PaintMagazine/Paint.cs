@@ -9,7 +9,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MSCPaintMagazine
+namespace PaintBooth
 {
     public class Painter : MonoBehaviour
     {
@@ -23,6 +23,7 @@ namespace MSCPaintMagazine
 
             public string previewUrl;
         }
+       
 
         private Canvas m_canvas;
 
@@ -38,11 +39,38 @@ namespace MSCPaintMagazine
 
         private MeshCollider m_magazineCollider;
 
+        private Canvas m_canvasT;
+
+        public PlayMakerFSM phone;
+
+        public FsmBool repair;
+
+        //private SaveData saveData;
+
+        private PaintBooth booth;
+
+        private int secondsLeft;
+        public static int StaticSeconds;
+
+        public static int loadSeconds;
+
+        private string path7;
+
+       //private string path2;
+
+        public static SaveData saveData;
+        private string url6;
+
+       
+
         private void Awake()
         {
             StartCoroutine(SetupMod());
-        }
+            phone = GameObject.Find("YARD/Building/LIVINGROOM/Telephone/Logic/PhoneLogic").GetComponent<PlayMakerFSM>();
+            repair = phone.FsmVariables.GetFsmBool("RepairReady");
 
+        }
+       
         private IEnumerator SetupMod()
         {
             while (GameObject.Find("PLAYER") == null)
@@ -58,7 +86,7 @@ namespace MSCPaintMagazine
                     m_playerViewFsm = playMakerFSM;
                 }
             }
-            string path2 = PaintMagazine.assetPath;
+            string path2 = PaintBooth.assetPath;
             if (SystemInfo.graphicsDeviceVersion.StartsWith("OpenGL") && Application.platform == RuntimePlatform.WindowsPlayer)
             {
                 path2 = Path.Combine(path2, "bundle-linux");
@@ -83,6 +111,7 @@ namespace MSCPaintMagazine
             m_bundle = AssetBundle.CreateFromMemoryImmediate(File.ReadAllBytes(path2));
             SetupGUI();
             SetupMagazine();
+            
             WWW www = new WWW("https://glot.io/snippets/fhoslu1ytm/raw/PMlist");
             yield return www;
             string[] lines = www.text.Split(new string[2]
@@ -105,14 +134,21 @@ namespace MSCPaintMagazine
                     });
                 }
             }
+            StartCoroutine(LoadTimer());
             ModConsole.Print("Loaded " + m_paintJobs.Count + " paintjobs!");
             ModConsole.Print("Custom Paint Setup!");
+            
             path2 = Path.Combine(Application.persistentDataPath, "lastpainturl.txt");
             if (File.Exists(path2))
             {
-                LoadImageAndSetSatsuma(File.ReadAllText(path2));
+                
+                //LoadImageAndSetSatsuma(File.ReadAllText(path2));
             }
+
+
             m_bundle.Unload(unloadAllLoadedObjects: false);
+            
+            //StartCoroutine(LoadTimer());
         }
 
         private void SetupMagazine()
@@ -129,6 +165,8 @@ namespace MSCPaintMagazine
         {
             m_canvas = UnityEngine.Object.Instantiate(m_bundle.LoadAssetWithSubAssets<GameObject>("PaintJobCanvas")[0]).GetComponent<Canvas>();
             m_canvas.gameObject.SetActive(value: false);
+            m_canvasT = UnityEngine.Object.Instantiate(m_bundle.LoadAssetWithSubAssets<GameObject>("TextCanvas")[0]).GetComponent<Canvas>();
+            m_canvasT.gameObject.SetActive(value: false);
         }
 
         private void Update()
@@ -159,7 +197,22 @@ namespace MSCPaintMagazine
                         string copy = paintJob.url;
                         transform2.GetComponent<Button>().onClick.AddListener(delegate
                         {
-                            LoadImageAndSetSatsuma(copy);
+                            if (loadSeconds == 10)
+                            {
+                                SetUrl(copy);
+                                ResetTimer();
+                                CanvasClose();
+                                PayMoney();
+                                StartTimer(copy);
+                                ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
+                            }
+                            else
+                            {
+                                
+                                CanvasClose();
+                                StartCoroutine(TextC());
+                            }
+                            
                         });
                     }
                 }
@@ -168,6 +221,12 @@ namespace MSCPaintMagazine
             {
                 m_canvas.gameObject.SetActive(value: false);
             }
+           
+        }
+        private void CanvasClose()
+        {
+            ((BoolTest)m_playerViewFsm.FsmStates.First((FsmState x) => x.Name == "In Menu").Actions.First((FsmStateAction x) => x is BoolTest)).boolVariable.Value = false;
+            m_canvas.gameObject.SetActive(value: false);
         }
 
         private IEnumerator LoadPreviewForImage(string url, Image image)
@@ -191,6 +250,7 @@ namespace MSCPaintMagazine
             WWW www = new WWW(url);
             yield return www;
             m_satsumaDecalTexture = www.texture;
+            
             m_satsuma = PlayMakerGlobals.Instance.Variables.FindFsmGameObject("TheCar").Value;
             ChangeSatsumaDecalTexture("Body/car body(xxxxx)");
             ChangeSatsumaDecalTexture("Body/pivot_hood/hood(Clone)");
@@ -199,6 +259,12 @@ namespace MSCPaintMagazine
             ChangeSatsumaDecalTexture("Body/pivot_fender_left/fender left(Clone)");
             ChangeSatsumaDecalTexture("Body/pivot_fender_right/fender right(Clone)");
             ChangeSatsumaDecalTexture("Body/pivot_bootlid/bootlid(Clone)");
+        }
+        private void SetUrl(string url)
+        {
+            File.WriteAllText(Path.Combine(Application.persistentDataPath, "lastpainturl.txt"), url);
+            WWW www = new WWW(url);
+            m_satsumaDecalTexture = www.texture;
         }
 
         private void ChangeSatsumaDecalTexture(string p)
@@ -210,5 +276,129 @@ namespace MSCPaintMagazine
                 component.sharedMaterial.SetTexture("_DetailAlbedoMap", m_satsumaDecalTexture);
             }
         }
+        public int seconds;
+        private bool timerStopped = false;
+        private bool paintjobApplied;
+        public void ResetTimer()
+        {
+            
+            seconds = 0;
+            ModConsole.Print("Timer Resetted");
+        }
+        public void StartTimer(string copy)
+        {
+            StartCoroutine(RunTimer(copy));
+            ModConsole.Print("Timer Started");
+        }
+        public void StopTimer(string copy)
+        {
+            StopCoroutine(RunTimer(copy));
+            ModConsole.Print("Timer Stopped");
+        }
+        public IEnumerator RunTimer(string copy)
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1);
+                seconds++;
+                StaticSeconds = seconds;
+                //ModConsole.Print("Static Seconds :" + StaticSeconds.ToString("F2"));
+                if (seconds == 10)
+                {
+                    seconds = 0;
+
+                    LoadImageAndSetSatsuma(copy);
+                    if (!repair.Value)
+                    {
+                        repair.Value = true;
+                        ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
+                    }
+                    else
+                    {
+                        repair.Value = false;
+                    }
+                    ModConsole.Print("Timer is at PEAK");
+                    ModConsole.Print("Paintjob Done");
+                    StopCoroutine(RunTimer(copy));
+                    timerStopped = true;
+                    paintjobApplied = true;
+                    break;
+
+                }
+                ModConsole.Print("Timer : " + seconds.ToString("F2"));
+            }
+        }
+        private void PayMoney()
+        {
+            float amount = 1000f;
+            FsmFloat money = FsmVariables.GlobalVariables.FindFsmFloat("PlayerMoney");
+            money.Value -= amount;
+        }
+        public IEnumerator LoadTimer()
+        {
+            
+            while (true)
+            {
+                if (loadSeconds < 10)
+                {
+                    yield return new WaitForSeconds(1);
+                    loadSeconds++;
+                    StaticSeconds = loadSeconds;
+                    if (loadSeconds == 10)
+                    {
+                        loadSeconds = 10;
+                        path7 = PaintBooth.assetPath = Path.Combine(Application.persistentDataPath, "lastpainturl.txt");
+                        LoadImageAndSetSatsuma((File.ReadAllText(path7)));
+                        StopCoroutine(LoadTimer());
+                        if (!repair.Value)
+                        {
+                            repair.Value = true;
+                        }
+                        else
+                        {
+                            repair.Value = false;
+                        }
+                        ModConsole.Print("Loading Paintjob Complite");
+                        break;
+                    }
+                    ModConsole.Print(loadSeconds.ToString("F2"));
+
+                }
+                else if (loadSeconds > 9)
+                {
+                    path7 = PaintBooth.assetPath = Path.Combine(Application.persistentDataPath, "lastpainturl.txt");
+                    LoadImageAndSetSatsuma((File.ReadAllText(path7)));
+                    ModConsole.Print("Loading Load Paintjob");
+                    StopCoroutine(LoadTimer());
+                    break;
+                }
+            }
+        }
+        public static void LoadData()
+        {
+            var path = Path.Combine(Application.persistentDataPath, "PaintBooth.xml");
+            if (!File.Exists(path))
+                return;
+
+            var data = SaveUtility.DeserializeReadFile<SaveData>(path);
+            loadSeconds = data.timeLeft;
+            ModConsole.Print("loadSeconds Value Loaded");
+        }
+        private IEnumerator TextC()
+        {
+            m_canvasT.gameObject.SetActive(value: true);
+            yield return new WaitForSeconds(5);
+            m_canvasT.gameObject.SetActive(value: false);
+            StopCoroutine(TextC());
+        }
+        
+          
+               
+                
+                
+            
+        
+        
+
     }
 }

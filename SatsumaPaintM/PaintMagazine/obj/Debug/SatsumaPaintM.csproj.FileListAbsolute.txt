@@ -2,4 +2,3 @@ Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\bin\Debug\SatsumaPaintM.dll
 Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\bin\Debug\SatsumaPaintM.pdb
 Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Debug\SatsumaPaintM.dll
 Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Debug\SatsumaPaintM.pdb
-Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Debug\SatsumaPaintM.csprojAssemblyReference.cache

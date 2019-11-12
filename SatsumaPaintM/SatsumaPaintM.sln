@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatsumaPaintM", "PaintMagazine\SatsumaPaintM.csproj", "{2CEAE666-CBA5-4FA6-AEE3-D6C5CFB2DE20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintBooth", "PaintMagazine\PaintBooth.csproj", "{2CEAE666-CBA5-4FA6-AEE3-D6C5CFB2DE20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
