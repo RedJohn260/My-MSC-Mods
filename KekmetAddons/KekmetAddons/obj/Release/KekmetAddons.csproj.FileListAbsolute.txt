@@ -1,0 +1,15 @@
+F:\newTextures\Kekmet\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\KekmetAddons.dll
+F:\newTextures\Kekmet\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\obj\Release\KekmetAddons.csproj.CoreCompileInputs.cache
+F:\newTextures\Kekmet\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\obj\Release\KekmetAddons.dll
+F:\newTextures\Kekmet\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\KekmetAddons.cs
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\KekmetAddons.cs
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\KekmetAddons.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\obj\Release\KekmetAddons.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\Assembly-CSharp.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\Assembly-UnityScript-firstpass.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\ES2.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\HOTween.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\Boo.Lang.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\bin\Release\MoodkieSecurity.dll
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\obj\Release\KekmetAddons.csproj.CopyComplete
+H:\C# Projects\KekmetAddons\VisualStudio\KekmetAddons\KekmetAddons\obj\Release\KekmetAddons.csprojAssemblyReference.cache

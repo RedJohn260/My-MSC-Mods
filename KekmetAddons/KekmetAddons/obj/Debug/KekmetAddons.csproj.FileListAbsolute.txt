@@ -1,0 +1,13 @@
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\KekmetAddons.cs
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\KekmetAddons.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\KekmetAddons.pdb
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\Assembly-CSharp.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\Assembly-UnityScript-firstpass.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\ES2.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\HOTween.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\Boo.Lang.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\MoodkieSecurity.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.csproj.CopyComplete
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.dll
+Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.pdb
