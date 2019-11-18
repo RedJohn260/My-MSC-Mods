@@ -7,17 +7,17 @@ using System.Linq;
 
 namespace DigitalSpeedo
 {
-    public class SpeedoMagnet : MonoBehaviour
+    public class SpeedoAttach : MonoBehaviour
     {
-        private FsmBool guiAssemble;
+        private FsmBool assemble_gui;
 
-        private FsmBool guiDisassemble;
+        private FsmBool disassemble_gui;
 
-        private FsmString guiInteraction;
+        private FsmString interaction_gui;
 
-        private GameObject raycastParent;
+        private GameObject raycast_parent;
 
-        private FsmGameObject raycastObject;
+        private FsmGameObject raycast_object;
 
         public bool isFitted;
 
@@ -34,21 +34,21 @@ namespace DigitalSpeedo
         // Use this for initialization
         void Start()
         {
-            guiAssemble = PlayMakerGlobals.Instance.Variables.FindFsmBool("GUIassemble");
-            guiDisassemble = PlayMakerGlobals.Instance.Variables.FindFsmBool("GUIdisassemble");
-            guiInteraction = PlayMakerGlobals.Instance.Variables.FindFsmString("GUIinteraction");
-            raycastParent = GameObject.Find("PLAYER").transform.FindChild("Pivot/AnimPivot/Camera/FPSCamera/1Hand_Assemble/Hand").gameObject;
-            raycastObject = PlayMakerFSM.FindFsmOnGameObject(raycastParent, "PickUp").FsmVariables.FindFsmGameObject("RaycastHitObject");
+            assemble_gui = PlayMakerGlobals.Instance.Variables.FindFsmBool("GUIassemble");
+            disassemble_gui = PlayMakerGlobals.Instance.Variables.FindFsmBool("GUIdisassemble");
+            interaction_gui = PlayMakerGlobals.Instance.Variables.FindFsmString("GUIinteraction");
+            raycast_parent = GameObject.Find("PLAYER").transform.FindChild("Pivot/AnimPivot/Camera/FPSCamera/1Hand_Assemble/Hand").gameObject;
+            raycast_object = PlayMakerFSM.FindFsmOnGameObject(raycast_parent, "PickUp").FsmVariables.FindFsmGameObject("RaycastHitObject");
         }
         private void OnTriggerStay(Collider other)
         {
             if (!isFitted && other == pivotCollider && base.gameObject.layer == LayerMask.NameToLayer("Wheel"))
             {
-                guiAssemble.Value = true;
+                assemble_gui.Value = true;
                 if (Input.GetMouseButtonDown(0))
                 {
                     Attach();
-                    guiAssemble.Value = false;
+                    assemble_gui.Value = false;
                 }
             }
         }
@@ -56,14 +56,14 @@ namespace DigitalSpeedo
         {
             if (other == pivotCollider)
             {
-                guiAssemble.Value = false;
+                assemble_gui.Value = false;
             }
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (isFitted && raycastParent.activeInHierarchy && raycastObject.Value != null && raycastObject.Value == base.gameObject && Input.GetMouseButtonDown(1))
+            if (isFitted && raycast_parent.activeInHierarchy && raycast_object.Value != null && raycast_object.Value == base.gameObject && Input.GetMouseButtonDown(1))
             {
                 Detach();
             }

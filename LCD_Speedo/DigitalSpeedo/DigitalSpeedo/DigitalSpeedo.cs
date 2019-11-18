@@ -33,7 +33,7 @@ namespace DigitalSpeedo
 
         private GameObject IgnitionCheck;
 
-        private SpeedoMagnet speedo_magnet;
+        private SpeedoAttach speedo_attach;
 
         private GameObject speedo_pivotLCD;
 
@@ -49,8 +49,6 @@ namespace DigitalSpeedo
             ab = LoadAssets.LoadBundle(this, "speedo.unity3d");
             GameObject gameObject = ab.LoadAsset("lcd_display.prefab") as GameObject;
             SATSUMA = GameObject.Find("SATSUMA(557kg, 248)");
-            speed_text = gameObject.transform.FindChild("speed_text").gameObject;
-            glass_middle = gameObject.transform.FindChild("glass_middle").gameObject;
             AudioClip attachSound = ab.LoadAsset<AudioClip>("assemble");
             AudioClip detachSound = ab.LoadAsset<AudioClip>("disassemble");
             lcd_display = Object.Instantiate(gameObject);
@@ -62,26 +60,26 @@ namespace DigitalSpeedo
             lcd_display.transform.localEulerAngles = saveData.rotation;
             speedo_pivotLCD = new GameObject("LCD_Trigger");
             speedo_pivotLCD.transform.SetParent(SATSUMA.transform, false);
-            speedo_pivotLCD.transform.localPosition = new Vector3(-0.13f, 0.461f, 0.558f);
-            speedo_pivotLCD.transform.localEulerAngles = new Vector3(270f, 201f, 0f);
+            speedo_pivotLCD.transform.localPosition = new Vector3(0f, 0.451f, 0.538f);
+            speedo_pivotLCD.transform.localEulerAngles = new Vector3(270f, 203.64f, 0f);
             SphereCollider sphereCollider = speedo_pivotLCD.AddComponent<SphereCollider>();
             sphereCollider.isTrigger = true;
-            sphereCollider.radius = 1f;
-            speedo_magnet = lcd_display.AddComponent<SpeedoMagnet>();
-            speedo_magnet.pivotCollider = sphereCollider;
-            speedo_magnet.partCollider = lcd_display.GetComponent<Collider>();
-            speedo_magnet.soundSource = lcd_display.GetComponent<AudioSource>();
-            speedo_magnet.attachSound = attachSound;
-            speedo_magnet.detachSound = detachSound;
+            sphereCollider.radius = 0.05f;
+            speedo_attach = lcd_display.AddComponent<SpeedoAttach>();
+            speedo_attach.pivotCollider = sphereCollider;
+            speedo_attach.partCollider = lcd_display.GetComponent<Collider>();
+            speedo_attach.soundSource = lcd_display.GetComponent<AudioSource>();
+            speedo_attach.attachSound = attachSound;
+            speedo_attach.detachSound = detachSound;
             if (saveData.Attached)
             {
-                speedo_magnet.Attach(playSound: false);
+                speedo_attach.Attach(playSound: false);
             }
-            glass_middle.SetActive(false);
-            speed_text.SetActive(false);
             drivetrain = SATSUMA.GetComponent<Drivetrain>();
             IgnitionCheck = GameObject.Find("SATSUMA(557kg, 248)/Electricity").transform.Find("PowerON").gameObject;
-           
+            speed_text = lcd_display.transform.FindChild("speed_text").gameObject;
+            speed_text_mesh = speed_text.GetComponent<TextMesh>();
+            glass_middle = lcd_display.transform.FindChild("glass_middle").gameObject;
             ab.Unload(unloadAllLoadedObjects: false);
         }
 
@@ -95,9 +93,9 @@ namespace DigitalSpeedo
         {
             SaveUtility.WriteFile(new SaveData
             {
-                Attached = speedo_magnet.isFitted,
-                position = (speedo_magnet.isFitted ? Vector3.zero : lcd_display.transform.localPosition),
-                rotation = (speedo_magnet.isFitted ? Vector3.zero : lcd_display.transform.localEulerAngles),
+                Attached = speedo_attach.isFitted,
+                position = (speedo_attach.isFitted ? Vector3.zero : lcd_display.transform.localPosition),
+                rotation = (speedo_attach.isFitted ? Vector3.zero : lcd_display.transform.localEulerAngles),
             });
         }
 
@@ -108,7 +106,7 @@ namespace DigitalSpeedo
 
         public override void Update()
         {
-            if (IgnitionCheck.activeSelf == true && speedo_magnet.isFitted == true)
+            if (IgnitionCheck.activeSelf == true && speedo_attach.isFitted == true)
             {
                 glass_middle.SetActive(true);
                 speed_text.SetActive(true);
