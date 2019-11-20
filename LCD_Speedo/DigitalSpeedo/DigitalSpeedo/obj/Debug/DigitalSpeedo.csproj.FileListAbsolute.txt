@@ -20,3 +20,4 @@ Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Debug\MSCLoad
 Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Debug\DigitalSpeedo.csproj.CopyComplete
 Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Debug\DigitalSpeedo.dll
 Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Debug\DigitalSpeedo.pdb
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Debug\DigitalSpeedo.csprojAssemblyReference.cache

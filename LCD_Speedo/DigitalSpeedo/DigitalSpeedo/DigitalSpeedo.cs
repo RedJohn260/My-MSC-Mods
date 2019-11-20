@@ -111,7 +111,7 @@ namespace DigitalSpeedo
                 glass_middle.SetActive(true);
                 speed_text.SetActive(true);
                 dif_speed = Mathf.Abs(drivetrain.differentialSpeed);
-                string text = Mathf.Round(dif_speed) + "." + "km/h";
+                string text = Mathf.Round(dif_speed) + "---------------------------" + "KM/H";
                 speed_text_mesh.text = text;
             }
             else
