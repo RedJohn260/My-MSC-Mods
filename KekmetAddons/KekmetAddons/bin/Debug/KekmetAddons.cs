@@ -84,7 +84,7 @@ namespace KekmetAddons
         private readonly Keybind TurnSignalRight = new Keybind("TurnSignalRight ", "TurnSignalRight ", KeyCode.Keypad6);
         private bool TslPressed;
         private bool TsrPressed;
-        private Rect guiBox = new Rect((float)(Screen.width - 2150 / 2), 70f, 170f,170f);
+        private Rect guiBox = new Rect((float)(Screen.width - 2150 / 2), 70f, 600f,300f);
         private readonly Keybind openGUI = new Keybind("ShowGUI", "ShowGUI", KeyCode.Keypad8);
         private bool showgui;
         private bool FrontLoader;
@@ -100,17 +100,6 @@ namespace KekmetAddons
         private GameObject intLightTrigger;
         private GameObject intLightLight;
         private static Drivetrain drivetrain;
-        private static Settings Ratio_R = new Settings("ReverseRatio", "Ratio: R", -11f, Gears);
-        private static Settings Ratio_1 = new Settings("Ratio1", "Ratio: 1", 11f, Gears);
-        private static Settings Ratio_2 = new Settings("Ratio2", "Ratio: 2", 7f, Gears);
-        private static Settings Ratio_3 = new Settings("Ratio3", "Ratio: 3", 5f, Gears);
-        private static Settings Ratio_4 = new Settings("Ratio4", "Ratio: 4", 3.8f, Gears);
-        private static Settings Ratio_5 = new Settings("Ratio5", "Ratio: 5", 2.6f, Gears);
-        private static Settings Ratio_6 = new Settings("Ratio6", "Ratio: 6", 2f, Gears);
-        private static Settings Reset = new Settings("Reset", "Reset Ratio", GearsReset);
-        private static Settings awd = new Settings("awd", "AWD", AllWheel);
-        private static Settings FLON = new Settings("FLON", "FL Enabled", FL_ON);
-        private static Settings FLOFF = new Settings("FLOFF", "FL Disabled", FL_OFF);
         private static GameObject FL;
 
 
@@ -141,9 +130,8 @@ namespace KekmetAddons
             FL = GameObject.Find("KEKMET(350-400psi)/Frontloader");
             path = ModLoader.GetModAssetsFolder(this);
             drivetrain = GameObject.Find("KEKMET(350-400psi)").GetComponent<Drivetrain>();
-
-
-
+            GearsLoad();
+            FLLoadSettings();
         }
         private void AssetBundleLoad()
         {
@@ -748,19 +736,62 @@ namespace KekmetAddons
             }
             FsmVariables.GlobalVariables.FindFsmBool("PlayerInMenu").Value = false;
         }
+        private float gear_r = 0f;
+        private float gear_n = 0f;
+        private float gear_1 = 0f;
+        private float gear_2 = 0f;
+        private float gear_3 = 0f;
+        private float gear_4 = 0f;
+        private float gear_5 = 0f;
+        private float gear_6 = 0f;
         private void Window(int windowid)
         {
-            if (GUI.Button(new Rect(10f, 20f, 150f, 40f), "Front Loader ON/OFF"))
+            GUI.Label(new Rect(150f, 30f, 150f, 20f), "Gear Ratios");
+            GUI.Label(new Rect(10f, 50f, 10f, 30f), "R");
+            gear_r = GUI.HorizontalSlider(new Rect(30f, 55f, 300f, 30f), gear_r, -15f, 15f);
+            GUI.Label(new Rect(340f, 50f, 30f, 20f), gear_r.ToString("F1"));
+            GUI.Label(new Rect(10f, 80f, 10f, 20f), "1");
+            gear_1 = GUI.HorizontalSlider(new Rect(30f, 85f, 300f, 30f), gear_1, -15f, 15f);
+            GUI.Label(new Rect(340f, 80f, 30f, 20f), gear_1.ToString("F1"));
+            GUI.Label(new Rect(10f, 110f, 10f, 20f), "2");
+            gear_2 = GUI.HorizontalSlider(new Rect(30f, 115f, 300f, 30f), gear_2, -15f, 15f);
+            GUI.Label(new Rect(340f, 110f, 30f, 20f), gear_2.ToString("F1"));
+            GUI.Label(new Rect(10f, 140f, 10f, 20f), "3");
+            gear_3 = GUI.HorizontalSlider(new Rect(30f, 145f, 300f, 30f), gear_3, -15f, 15f);
+            GUI.Label(new Rect(340f, 140f, 30f, 20f), gear_3.ToString("F1"));
+            GUI.Label(new Rect(10f, 170f, 10f, 20f), "4");
+            gear_4 = GUI.HorizontalSlider(new Rect(30f, 175f, 300f, 30f), gear_4, -15f, 15f);
+            GUI.Label(new Rect(340f, 170f, 30f, 20f), gear_4.ToString("F1"));
+            GUI.Label(new Rect(10f, 200f, 10f, 20f), "5");
+            gear_5 = GUI.HorizontalSlider(new Rect(30f, 205f, 300f, 30f), gear_5, -15f, 15f);
+            GUI.Label(new Rect(340f, 200f, 30f, 20f), gear_5.ToString("F1"));
+            GUI.Label(new Rect(10f, 230f, 10f, 20f), "6");
+            gear_6 = GUI.HorizontalSlider(new Rect(30f, 235f, 300f, 30f), gear_6, -15f, 15f);
+            GUI.Label(new Rect(340f, 230f, 30f, 20f), gear_6.ToString("F1"));
+            if (GUI.Button(new Rect(400f, 20f, 150f, 40f), "Front Loader ON/OFF"))
             {
                 FrontLoader = !FrontLoader;
             }
-            if (GUI.Button(new Rect(10f, 70f, 150f, 40f), "Save Settings"))
+            if (GUI.Button(new Rect(400f, 70f, 150f, 40f), "AWD ON/OFF"))
+            {
+                awdIsSet = !awdIsSet;
+            }
+            if (GUI.Button(new Rect(400f, 120f, 150f, 40f), "Save Settings"))
             {
                 FLSaveSettings();
+                GearsSave();
+                ModConsole.Print("<b><color=green> Kekmet Addons: Settings Saved</color></b>");
             }
-            if (GUI.Button(new Rect(10f, 120f, 150f, 40f), "Load Settings"))
+            if (GUI.Button(new Rect(400f, 170f, 150f, 40f), "Load Settings"))
             {
                 FLLoadSettings();
+                GearsLoad();
+                ModConsole.Print("<b><color=green> Kekmet Addons: Settings Loaded</color></b>");
+            }
+            if (GUI.Button(new Rect(400f, 220f, 150f, 40f), "Reset Gear Ratio"))
+            {
+                GearsReset();
+                ModConsole.Print("<b><color=green> Kekmet Addons: Gear Ratio Resetted</color></b>");
             }
             GUI.DragWindow();
         }
@@ -772,7 +803,53 @@ namespace KekmetAddons
             saveString[num] = StoreFL.ToString();
             File.WriteAllLines(string.Concat(path, "/FrontLoaderState.txt"), saveString);
         }
+        private void GearsSave()
+        {
+            string[] str = new string[9];
+            int num = 0;
+            float GearR = this.gear_r;
+            str[num] = GearR.ToString();
+            int num1 = 1;
+            float Gear1 = this.gear_1;
+            str[num1] = Gear1.ToString();
+            int num2 = 2;
+            float Gear2 = this.gear_2;
+            str[num2] = Gear2.ToString();
+            int num3 = 3;
+            float Gear3 = this.gear_3;
+            str[num3] = Gear3.ToString();
+            int num4 = 4;
+            float Gear4 = this.gear_4;
+            str[num4] = Gear4.ToString();
+            int num5 = 5;
+            float Gear5 = this.gear_5;
+            str[num5] = Gear5.ToString();
+            int num6 = 6;
+            float Gear6 = this.gear_6;
+            str[num6] = Gear6.ToString();
+            int num7 = 7;
+            float GearN = this.gear_n;
+            str[num7] = GearN.ToString();
+            int num8 = 8;
+            bool awdState = this.awdIsSet;
+            str[num8] = awdState.ToString();
+            File.WriteAllLines(string.Concat(this.path, "/Gears.txt"), str);
+        }
+        private void GearsLoad()
+        {
+            string[] strArrays = new string[9];
 
+            strArrays = File.ReadAllLines(string.Concat(this.path, "/Gears.txt"));
+            this.gear_r = float.Parse(strArrays[0]);
+            this.gear_1 = float.Parse(strArrays[1]);
+            this.gear_2 = float.Parse(strArrays[2]);
+            this.gear_3 = float.Parse(strArrays[3]);
+            this.gear_4 = float.Parse(strArrays[4]);
+            this.gear_5 = float.Parse(strArrays[5]);
+            this.gear_6 = float.Parse(strArrays[6]);
+            this.gear_n = float.Parse(strArrays[7]);
+            this.awdIsSet = bool.Parse(strArrays[8]);
+        }
         private void FLLoadSettings()
         {
             string[] saveStringArrays = new string[1];
@@ -782,71 +859,48 @@ namespace KekmetAddons
 
         public override void ModSettings()
         {
-            Settings.AddSlider(this, Ratio_R, -15f, 15f);
-            Settings.AddSlider(this, Ratio_1, -15f, 15f);
-            Settings.AddSlider(this, Ratio_2, -15f, 15f);
-            Settings.AddSlider(this, Ratio_3, -15f, 15f);
-            Settings.AddSlider(this, Ratio_4, -15f, 15f);
-            Settings.AddSlider(this, Ratio_5, -15f, 15f);
-            Settings.AddSlider(this, Ratio_6, -15f, 15f);
-            Settings.AddButton(this, Reset, "Reset gear ratio.");
-            Settings.AddButton(this, FLON, "FL Enabled");
-            Settings.AddButton(this, FLOFF, "FL Disabled");
-            Settings.AddButton(this, awd, "All wheel Drive");
         }
-        private static void Gears()
+        private float[] gear = new float [8];
+        private void Gears()
         {
             if (drivetrain != null)
             {
-                drivetrain.gearRatios = new float[8]
-                {
-                float.Parse(Ratio_R.GetValue().ToString()),
-                0f,
-                float.Parse(Ratio_1.GetValue().ToString()),
-                float.Parse(Ratio_2.GetValue().ToString()),
-                float.Parse(Ratio_3.GetValue().ToString()),
-                float.Parse(Ratio_4.GetValue().ToString()),
-                float.Parse(Ratio_5.GetValue().ToString()),
-                float.Parse(Ratio_6.GetValue().ToString())
-                };
+                gear[0] = gear_r;
+                gear[1] = gear_n;
+                gear[2] = gear_1;
+                gear[3] = gear_2;
+                gear[4] = gear_3;
+                gear[5] = gear_4;
+                gear[6] = gear_5;
+                gear[7] = gear_6;
+                drivetrain.gearRatios = gear;
             }
         }
-        private static void GearsReset()
+        private void GearsReset()
         {
-            Ratio_R.Value = -11f;
-            Ratio_1.Value = 11f;
-            Ratio_2.Value = 7f;
-            Ratio_3.Value = 5f;
-            Ratio_4.Value = 3.8f;
-            Ratio_5.Value = 2.6f;
-            Ratio_6.Value = 2f;
-            Gears();
+            gear_r = -11f;
+            gear_n = 0f;
+            gear_1 = 11f;
+            gear_2 = 7f;
+            gear_3 = 5f;
+            gear_4 = 3.8f;
+            gear_5 = 2.6f;
+            gear_6 = 2f;
         }
-        private static void FL_ON()
+        private bool awdIsSet = false;
+        private void AllWheel()
         {
-            if (FL = null)
-            {
-                FL.SetActive(true);
-            }
-        }
-        private static void FL_OFF()
-        {
-            if (FL != null)
-            {
-                FL.SetActive(false);
-            }
-        }
-        private static void AllWheel()
-        {
-            if(drivetrain.transmission == Drivetrain.Transmissions.RWD)
+            if(drivetrain.transmission == Drivetrain.Transmissions.RWD && awdIsSet)
             {
                 drivetrain.SetTransmission(Drivetrain.Transmissions.AWD);
                 drivetrain.transmission = Drivetrain.Transmissions.AWD;
+                ModConsole.Print("<b><color=green>Kekmet Addons: All Wheel Drive Turned ON</color></b>");
             }
-            else if(drivetrain.transmission == Drivetrain.Transmissions.AWD)
+            else if(drivetrain.transmission == Drivetrain.Transmissions.AWD && !awdIsSet)
             {
                 drivetrain.SetTransmission(Drivetrain.Transmissions.RWD);
                 drivetrain.transmission = Drivetrain.Transmissions.RWD;
+                ModConsole.Print("<b><color=green> Kekmet Addons: All Wheel Drive Turned OFF</color></b>");
             }
         }
 
@@ -866,6 +920,9 @@ namespace KekmetAddons
 
         public override void Update()
         {
+
+            Gears();
+            AllWheel();
             LightsOperation();
 
             if (IntSwitchEnable)
@@ -953,14 +1010,5 @@ namespace KekmetAddons
                 timer4 = 0f;
             }
         }
-       
-
-       
-        
-
- 
-
-       
-        
     }
 }

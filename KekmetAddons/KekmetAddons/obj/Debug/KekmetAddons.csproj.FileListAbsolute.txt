@@ -7,7 +7,6 @@ Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\ES2.dll
 Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\HOTween.dll
 Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\Boo.Lang.dll
 Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\bin\Debug\MoodkieSecurity.dll
-Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.csprojAssemblyReference.cache
 Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.csproj.CopyComplete
 Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.dll
 Z:\LocalGit\My-MSC-Mods\KekmetAddons\KekmetAddons\obj\Debug\KekmetAddons.pdb
