@@ -11,7 +11,7 @@ namespace KekmetAddons
         public override string ID => "KekmetAddons"; //Your mod ID (unique)
         public override string Name => "KekmetAddons"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "1.2"; //Version
+        public override string Version => "1.3"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
