@@ -201,7 +201,6 @@ namespace PaintBooth
                 else
                 {
                     GUIuse.Value = false;
-
                 }
             }
         }

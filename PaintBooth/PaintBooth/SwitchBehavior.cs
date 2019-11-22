@@ -6,35 +6,35 @@ namespace PaintBooth
 {
     public class SwitchBehavior : MonoBehaviour
     {
-        private GameObject prekidac;
+        public GameObject prekidac;
 
-        private GameObject booth;
+        public GameObject booth;
 
-        private GameObject light_child;
+        public GameObject light_child;
 
-        private Vector3 eular;
+        public Vector3 eular;
 
-        private Ray ray;
+        public Ray ray;
 
-        private RaycastHit hit;
+        public RaycastHit hit;
 
-        private GameObject player;
+        public GameObject player;
 
-        private FsmBool GUIuse;
+        public FsmBool GUIuse;
 
-        private Material sign_mat;
+        public Material sign_mat;
 
-        private GameObject sign_light;
+        public GameObject sign_light;
 
-        private bool played1 = false;
+        public bool played1 = false;
 
-        private bool played2 = false;
+        public bool played2 = false;
 
-        private AudioSource switch_audio;
+        public AudioSource switch_audio;
 
-        private GameObject wall_radiator;
+        public GameObject wall_radiator;
 
-        private AudioSource radiator_audio;
+        public AudioSource radiator_audio;
 
         // Use this for initialization
         void Awake()
@@ -68,7 +68,6 @@ namespace PaintBooth
                     GUIuse.Value = true;
                     if (Input.GetMouseButtonDown(0))
                     {
-
                         if (!played1)
                         {
                             switch_audio.Play();
@@ -91,7 +90,6 @@ namespace PaintBooth
                     }
                     else if (Input.GetMouseButtonDown(1))
                     {
-
                         if (!played2)
                         {
                             switch_audio.Play();

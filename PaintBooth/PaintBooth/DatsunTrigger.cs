@@ -8,7 +8,6 @@ namespace PaintBooth
         public static bool CarInBooth = false;
         public static bool CarNotInBooth = false;
         public static bool stopTimer = false;
-
         void OnTriggerEnter(Collider coll)
         {
             if (coll.gameObject.name == "gearbox(Clone)")

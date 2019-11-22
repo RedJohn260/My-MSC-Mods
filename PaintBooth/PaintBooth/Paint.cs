@@ -23,8 +23,6 @@ namespace PaintBooth
 
             public string previewUrl;
         }
-       
-
         private Canvas m_canvas;
 
         private List<PaintJob> m_paintJobs = new List<PaintJob>();
@@ -47,9 +45,6 @@ namespace PaintBooth
 
         public FsmBool repair;
 
-        private PaintBooth booth;
-
-        private int secondsLeft;
         public static int StaticSeconds;
 
         public static int loadSeconds;
@@ -57,9 +52,6 @@ namespace PaintBooth
         private string path7;
 
         public static SaveData saveData;
-        private string url6;
-
-        //private string copy11;
 
         public int seconds;
 
@@ -147,15 +139,12 @@ namespace PaintBooth
                 ModConsole.Error(imageFilePath2.ToString() + " : does not exist");
                 UnityEngine.Debug.LogError(imageFilePath2 + " : does not exist");
             }
-                StartCoroutine(LoadTimer());
+            StartCoroutine(LoadTimer());
             ModConsole.Print("Loaded " + m_paintJobs.Count + " paintjobs!");
             ModConsole.Print("Custom Paint Setup!");
-            
             path2 = Path.Combine(Application.persistentDataPath, "lastpainturl.txt");
             if (File.Exists(path2))
             {
-                
-                //LoadImageAndSetSatsuma(File.ReadAllText(path2));
             }
             m_bundle.Unload(unloadAllLoadedObjects: false);
         }
@@ -164,7 +153,8 @@ namespace PaintBooth
         {
             GameObject gameObject = UnityEngine.Object.Instantiate(m_bundle.LoadAsset<GameObject>("MagazinePrefab"));
             //gameObject.transform.position = new Vector3(1552.9f, 5.1f, 737.1f); -- flettari chair
-            gameObject.transform.position = new Vector3(1562.2f, 5.2f, 725.5001f); //-- fleetari garage
+            gameObject.transform.position = new Vector3(1553.797f, 5.760008f, 740.6842f); //-- fleetari desk
+            gameObject.transform.localEulerAngles = new Vector3(358.0002f, 119.0003f, 290.0002f);
             m_magazineCollider = gameObject.transform.FindChild("Mesh").gameObject.AddComponent<MeshCollider>();
             m_magazineCollider.convex = true;
             m_magazineCollider.isTrigger = true;
@@ -232,7 +222,6 @@ namespace PaintBooth
                                 CanvasClose();
                                 StartCoroutine(TextR());
                             }
-                            
                         });
                     }
                 }
@@ -387,9 +376,7 @@ namespace PaintBooth
                         ModConsole.Print("Loading Paintjob Complete");
                         break;
                     }
-                   
                     //ModConsole.Print(loadSeconds.ToString("F2"));
-
                 }
                 else if (loadSeconds > 59)
                 {
@@ -424,14 +411,5 @@ namespace PaintBooth
             m_canvasR.gameObject.SetActive(value: false);
             StopCoroutine(TextR());
         }
-
-
-
-
-
-
-
-
-
     }
 }

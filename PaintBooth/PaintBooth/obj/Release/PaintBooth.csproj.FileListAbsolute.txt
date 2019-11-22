@@ -1,3 +1,6 @@
 Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\bin\Release\PaintBooth.dll
 Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Release\PaintBooth.dll
 Z:\LocalGit\My-MSC-Mods\SatsumaPaintM\PaintMagazine\obj\Release\PaintBooth.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\PaintBooth\PaintBooth\bin\Release\PaintBooth.dll
+Z:\LocalGit\My-MSC-Mods\PaintBooth\PaintBooth\obj\Release\PaintBooth.dll
+Z:\LocalGit\My-MSC-Mods\PaintBooth\PaintBooth\obj\Release\PaintBooth.csprojAssemblyReference.cache
