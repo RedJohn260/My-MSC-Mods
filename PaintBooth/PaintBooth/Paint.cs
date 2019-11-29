@@ -198,7 +198,7 @@ namespace PaintBooth
                         string copy = paintJob.url;
                         transform2.GetComponent<Button>().onClick.AddListener(delegate
                         {
-                            if (seconds == 60 || loadSeconds == 60 && DatsunTrigger.CarInBooth == true)
+                            if (seconds == 2700 || loadSeconds == 2700 && DatsunTrigger.CarInBooth == true)
                             {
                                 if (ferndale_key.Value == 0)
                                 {
@@ -210,7 +210,7 @@ namespace PaintBooth
                                 CanvasClose();
                                 PayMoney();
                                 StartTimer(copy);
-                                ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
+                                //ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
                             }
                             else if(loadSeconds != 60 && seconds != 60 && DatsunTrigger.CarInBooth == false)
                             {
@@ -311,7 +311,7 @@ namespace PaintBooth
                 seconds++;
                 StaticSeconds = seconds;
                 //ModConsole.Print("Static Seconds :" + StaticSeconds.ToString("F2"));
-                if (seconds == 60)
+                if (seconds == 2700) //2700 seconds = 45 minutes
                 {
                     seconds = 0;
 
@@ -319,21 +319,21 @@ namespace PaintBooth
                     if (!repair.Value)
                     {
                         repair.Value = true;
-                        ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
+                        //ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
                     }
                     else
                     {
                         repair.Value = false;
                     }
-                    ModConsole.Print("Timer is at PEAK");
-                    ModConsole.Print("Paintjob Done");
+                    //ModConsole.Print("Timer is at PEAK");
+                    //ModConsole.Print("Paintjob Done");
                     StopCoroutine(RunTimer(copy));
                     timerStopped = true;
                     paintjobApplied = true;
                     break;
 
                 }
-                else if(seconds != 60 && DatsunTrigger.CarNotInBooth == true)
+                else if(seconds != 2700 && DatsunTrigger.CarNotInBooth == true)
                 {
                     StopCoroutine(RunTimer(copy));
                     ModConsole.Print("Timer Stopped ");
@@ -344,7 +344,7 @@ namespace PaintBooth
         }
         private void PayMoney()
         {
-            float amount = 100f;
+            float amount = 7500f;
             FsmFloat money = FsmVariables.GlobalVariables.FindFsmFloat("PlayerMoney");
             money.Value -= amount;
         }
@@ -353,12 +353,12 @@ namespace PaintBooth
             
             while (true)
             {
-                if (loadSeconds < 60)
+                if (loadSeconds < 2700)
                 {
                     yield return new WaitForSeconds(1);
                     loadSeconds++;
                     StaticSeconds = loadSeconds;
-                    if (loadSeconds == 60)
+                    if (loadSeconds == 2700)
                     {
                         //loadSeconds = 60;
                         path7 = PaintBooth.assetPath = Path.Combine(Application.persistentDataPath, "lastpainturl.txt");
@@ -367,7 +367,7 @@ namespace PaintBooth
                         if (!repair.Value)
                         {
                             repair.Value = true;
-                            ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
+                            //ModConsole.Print("Fleetari Call Value : " + repair.Value.ToString());
                         }
                         else
                         {
@@ -378,11 +378,11 @@ namespace PaintBooth
                     }
                     //ModConsole.Print(loadSeconds.ToString("F2"));
                 }
-                else if (loadSeconds > 59)
+                else if (loadSeconds > 2699)
                 {
                     path7 = PaintBooth.assetPath = Path.Combine(Application.persistentDataPath, "lastpainturl.txt");
                     LoadImageAndSetSatsuma((File.ReadAllText(path7)));
-                    ModConsole.Print("Loading Load Paintjob");
+                    //ModConsole.Print("Loading Load Paintjob");
                     StopCoroutine(LoadTimer());
                     break;
                 }
