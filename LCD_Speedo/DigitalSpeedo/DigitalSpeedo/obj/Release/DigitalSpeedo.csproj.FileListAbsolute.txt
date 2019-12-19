@@ -18,3 +18,25 @@ H:\C# Projects\SpeedoProj\Visual\DigitalSpeedo\DigitalSpeedo\bin\Release\System.
 H:\C# Projects\SpeedoProj\Visual\DigitalSpeedo\DigitalSpeedo\bin\Release\MSCLoader.pdb
 H:\C# Projects\SpeedoProj\Visual\DigitalSpeedo\DigitalSpeedo\obj\Release\DigitalSpeedo.csproj.CopyComplete
 H:\C# Projects\SpeedoProj\Visual\DigitalSpeedo\DigitalSpeedo\obj\Release\DigitalSpeedo.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\DigitalSpeedo.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\Assembly-CSharp.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\MSCLoader.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\PlayMaker.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\UnityEngine.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\UnityEngine.UI.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\Assembly-UnityScript-firstpass.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\ES2.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\cInput.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\HOTween.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\Assembly-CSharp-firstpass.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\NAudio.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\NVorbis.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\Newtonsoft.Json.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\Boo.Lang.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\MoodkieSecurity.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\Mono.Security.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\System.Runtime.Serialization.dll
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\bin\Release\MSCLoader.pdb
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Release\DigitalSpeedo.csprojAssemblyReference.cache
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Release\DigitalSpeedo.csproj.CopyComplete
+Z:\LocalGit\My-MSC-Mods\LCD_Speedo\DigitalSpeedo\DigitalSpeedo\obj\Release\DigitalSpeedo.dll

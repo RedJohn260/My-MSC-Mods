@@ -9,7 +9,7 @@ namespace DigitalSpeedo
         public override string ID => "DigitalSpeedo"; //Your mod ID (unique)
         public override string Name => "DigitalSpeedo"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "1.0"; //Version
+        public override string Version => "1.1"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
@@ -60,8 +60,10 @@ namespace DigitalSpeedo
             lcd_display.transform.localEulerAngles = saveData.rotation;
             speedo_pivotLCD = new GameObject("LCD_Trigger");
             speedo_pivotLCD.transform.SetParent(SATSUMA.transform, false);
-            speedo_pivotLCD.transform.localPosition = new Vector3(0f, 0.451f, 0.538f);
-            speedo_pivotLCD.transform.localEulerAngles = new Vector3(270f, 203.64f, 0f);
+            //speedo_pivotLCD.transform.localPosition = new Vector3(0f, 0.451f, 0.538f);
+            //speedo_pivotLCD.transform.localEulerAngles = new Vector3(270f, 203.64f, 0f);
+            speedo_pivotLCD.transform.localPosition = new Vector3(0f, 0.451f, 0.528f);
+            speedo_pivotLCD.transform.localEulerAngles = new Vector3(270f, 184.6401f, 0f);
             SphereCollider sphereCollider = speedo_pivotLCD.AddComponent<SphereCollider>();
             sphereCollider.isTrigger = true;
             sphereCollider.radius = 0.05f;
