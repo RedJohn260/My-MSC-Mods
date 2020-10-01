@@ -21,3 +21,14 @@ Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\Boo.Lang.dll
 Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\bin\Release\MoodkieSecurity.dll
 Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.csproj.CopyComplete
 Z:\LocalGit\My-MSC-Mods\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\JonnezRlight.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\Assembly-CSharp.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\cInput.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\Assembly-UnityScript-firstpass.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\ES2.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\HOTween.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\Boo.Lang.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\bin\Release\MoodkieSecurity.dll
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.csproj.CoreCompileInputs.cache
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.csproj.CopyComplete
+C:\Users\RedJo\OneDrive\Desktop\JonnezRlight\JonnezRlight\obj\Release\JonnezRlight.dll
