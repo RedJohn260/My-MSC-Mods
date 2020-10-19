@@ -2,3 +2,27 @@ H:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColor
 H:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.csprojAssemblyReference.cache
 H:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.csproj.CoreCompileInputs.cache
 H:\C# Projects\HayosikoColorfulGauges\HayosikoColorfulGaugesVisual\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\HayosikoColorfulGauges.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\Assembly-CSharp.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\MSCLoader.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\PlayMaker.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\UnityEngine.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\UnityEngine.UI.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\Assembly-UnityScript-firstpass.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\ES2.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\cInput.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\HOTween.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\Assembly-CSharp-firstpass.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\NAudio.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\NVorbis.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\Newtonsoft.Json.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\Boo.Lang.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\MoodkieSecurity.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\Mono.Security.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\System.Runtime.Serialization.dll
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\MSCLoader.pdb
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\bin\Release\MSCLoader.xml
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.csprojAssemblyReference.cache
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.csproj.CoreCompileInputs.cache
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.csproj.CopyComplete
+G:\LocalGit\My-MSC-Mods\HayosikoColorfulGauges\HayosikoColorfulGauges\obj\Release\HayosikoColorfulGauges.dll
