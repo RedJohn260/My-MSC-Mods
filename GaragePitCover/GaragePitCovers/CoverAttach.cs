@@ -1,4 +1,5 @@
-﻿using MSCLoader;
+﻿//Original script made by Fredrik. Resource from My Summer Car Modding discord server.
+using MSCLoader;
 using UnityEngine;
 using HutongGames.PlayMaker;
 using System.Collections;
