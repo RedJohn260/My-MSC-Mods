@@ -10,7 +10,7 @@ namespace DigitalSpeedo
         public override string ID => "DigitalSpeedo"; //Your mod ID (unique)
         public override string Name => "DigitalSpeedo"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "1.2"; //Version
+        public override string Version => "1.3"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
@@ -73,6 +73,8 @@ namespace DigitalSpeedo
             lcd_display.tag = "PART";
             lcd_display.transform.localPosition = saveData.position;
             lcd_display.transform.localEulerAngles = saveData.rotation;
+            lcd_display.transform.FindChild("glass_front").gameObject.GetComponent<MeshRenderer>().reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+            lcd_display.transform.FindChild("lcd").gameObject.GetComponent<MeshRenderer>().reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
             speedo_pivotLCD = new GameObject("LCD_Trigger");
             speedo_pivotLCD.transform.SetParent(SATSUMA.transform, false);
             //speedo_pivotLCD.transform.localPosition = new Vector3(0f, 0.451f, 0.538f);
@@ -137,7 +139,7 @@ namespace DigitalSpeedo
                 Attached = speedo_attach.isFitted,
                 position = (speedo_attach.isFitted ? Vector3.zero : lcd_display.transform.localPosition),
                 rotation = (speedo_attach.isFitted ? Vector3.zero : lcd_display.transform.localEulerAngles),
-                bgColor = glass_middle.GetComponent<MeshRenderer>().material.color,
+                bgColor = glass_middle.GetComponent<MeshRenderer>().material.GetColor("_EmissionColor"),
                 textccolor = speed_text.GetComponent<MeshRenderer>().material.color,
             });
         }

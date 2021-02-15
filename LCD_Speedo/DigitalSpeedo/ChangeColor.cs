@@ -33,6 +33,8 @@ namespace DigitalSpeedo
             textcolors[1] = new Color(0, 0.54f, 0);
             textcolors[2] = new Color(0f, 0.27f, 0.8f);
 
+            //ChangeBackgroundColor();
+
         }
         void Update()
         {
@@ -50,12 +52,7 @@ namespace DigitalSpeedo
                             PlayMakerGlobals.Instance.Variables.FindFsmString("GUIinteraction").Value = "Change Background Color";
                             if (Input.GetMouseButtonDown(0) && bgcolors.Length > 0)
                             {
-                                indexbg++;
-                                indexbg %= bgcolors.Length;
-                                bgmat.SetColor("_EmissionColor", bgcolors[indexbg]);
-                                e_buttonbg.color = bgcolors[indexbg];
-                                e_buttonbg.SetColor("_EmissionColor", bgcolors[indexbg]);
-                                audioSource.PlayOneShot(button_push);
+                                ChangeBackgroundColor();
                             }
                             break;
                         }
@@ -68,19 +65,34 @@ namespace DigitalSpeedo
                             PlayMakerGlobals.Instance.Variables.FindFsmString("GUIinteraction").Value = "Change Text Color";
                             if (Input.GetMouseButtonDown(0) && textcolors.Length > 0)
                             {
-                                indextx++;
-                                indextx %= textcolors.Length;
-                                textmat.color = textcolors[indextx];
-                                textmat.SetColor("_EmissionColor", textcolors[indextx]);
-                                e_buttontx.color = textcolors[indextx];
-                                e_buttontx.SetColor("_EmissionColor", textcolors[indextx]);
-                                audioSource.PlayOneShot(button_push);
+                                ChangeTextColor();
                             }
                             break;
                         }
                     }
                 }
             }
+        }
+
+        public void ChangeBackgroundColor()
+        {
+            indexbg++;
+            indexbg %= bgcolors.Length;
+            bgmat.SetColor("_EmissionColor", bgcolors[indexbg]);
+            e_buttonbg.color = bgcolors[indexbg];
+            e_buttonbg.SetColor("_EmissionColor", bgcolors[indexbg]);
+            audioSource.PlayOneShot(button_push);
+        }
+
+        public void ChangeTextColor()
+        {
+            indextx++;
+            indextx %= textcolors.Length;
+            textmat.color = textcolors[indextx];
+            textmat.SetColor("_EmissionColor", textcolors[indextx]);
+            e_buttontx.color = textcolors[indextx];
+            e_buttontx.SetColor("_EmissionColor", textcolors[indextx]);
+            audioSource.PlayOneShot(button_push);
         }
     }
 }
