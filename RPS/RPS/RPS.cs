@@ -32,7 +32,7 @@ namespace RPS
 
         public override void OnNewGame()
         {
-            // Called once, when starting a New Game, you can reset your saves here
+            ResetBuy();
         }
 
         public override void OnLoad()
@@ -127,16 +127,6 @@ namespace RPS
         private static void ResetBuy()
         {
             SaveUtility.Remove();
-        }
-
-        public override void OnGUI()
-        {
-            // Draw unity OnGUI() here
-        }
-
-        public override void Update()
-        {
-
         }
     }
 }

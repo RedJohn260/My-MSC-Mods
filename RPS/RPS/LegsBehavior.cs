@@ -5,7 +5,6 @@ namespace RPS
 {
     public class LegsBehavior : MonoBehaviour
     {
-        //private float move_speed = 3f;
         public GameObject leg1;
         public GameObject leg2;
         public GameObject leg3;
@@ -22,10 +21,6 @@ namespace RPS
         // Use this for initialization
         void Start()
         {
-            //leg1 = transform.FindChild("leg_1").gameObject;
-            //leg2 = transform.FindChild("leg_2").gameObject;
-            //leg3 = transform.FindChild("leg_3").gameObject;
-            //leg4 = transform.FindChild("leg_4").gameObject;
             legs_audio = this.transform.GetComponent<AudioSource>();
             leg1_anim = leg1.GetComponent<Animation>();
             leg2_anim = leg2.GetComponent<Animation>();

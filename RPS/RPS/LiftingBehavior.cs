@@ -24,8 +24,6 @@ namespace RPS
         // Use this for initialization
         void Start()
         {
-            //lift_switch = transform.FindChild("switch_mesh").gameObject;
-            //lifting_part = transform.FindChild("moving_parts").gameObject;
             startPos = new Vector3(0, 0, 0);
             midPos = new Vector3(0, 0, 0.5f);
             endPos = new Vector3(0, 0, 1);
@@ -79,10 +77,8 @@ namespace RPS
             {
                 lifting_part.transform.localPosition = Lerp(endPos, startPos, timeStartedLerping, lerpTime);
             }
-            
 
             RAY();
-            //ModConsole.Print(lifting_part.transform.position.z.ToString());
         }
 
         
@@ -96,14 +92,6 @@ namespace RPS
                 {
                     if (hit.collider.name == lift_switch.name)
                     {
-                        //if (Input.GetMouseButtonDown(0) && lifting_part.transform.localPosition.z == 0)
-                        //{
-                        //    lift_switch.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-                        //    switch_sound.Play();
-                        //    //StartLerpingUp();
-                        //    StartLerpingMiddle();
-                        //    is_lift_lifted = !is_lift_lifted;
-                        //}
                         if (Input.GetMouseButtonDown(0) && lifting_part.transform.localPosition.z == 0f)
                         {
                             lift_switch.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
