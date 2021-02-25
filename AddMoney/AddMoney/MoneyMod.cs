@@ -29,13 +29,13 @@ namespace AddMoney
         }
         public override void Update()
         {
-            if (money_add.IsDown())
+            if (money_add.GetKeybindDown())
             {
                 money.Value += ammount;
                 ModConsole.Print("<color=orange>MoneyMod : Added 1000 marks.</color>");
 
             }
-            else if (money_remove.IsDown())
+            else if (money_remove.GetKeybindDown())
             {
                 money.Value -= ammount;
                 ModConsole.Print("<color=orange>MoneyMod : Removed 1000 marks.</color>");
