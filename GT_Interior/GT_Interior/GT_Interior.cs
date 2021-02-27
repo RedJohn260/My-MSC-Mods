@@ -9,7 +9,7 @@ namespace GT_Interior
         public override string ID => "GT_Interior"; //Your mod ID (unique)
         public override string Name => "GT_Interior"; //You mod name
         public override string Author => "RedJohn260"; //Your Username
-        public override string Version => "1.1"; //Version
+        public override string Version => "1.2"; //Version
 
         // Set this to true if you will be load custom assets from Assets folder.
         // This will create subfolder in Assets folder for your mod.
@@ -36,13 +36,27 @@ namespace GT_Interior
             Seats = ab.LoadAsset("Seats.mat") as Material;
             gtdash = ab.LoadAsset("gtdash.mat") as Material;
 
-            column = Object.Instantiate(ab.LoadAsset<GameObject>("gtcolumn.prefab"));
-            console = Object.Instantiate(ab.LoadAsset<GameObject>("gtconsole.prefab"));
-            meters = Object.Instantiate(ab.LoadAsset<GameObject>("gtmeters.prefab"));
-            gwheel = Object.Instantiate(ab.LoadAsset<GameObject>("gtwheel.prefab"));
-            gwheel1 = Object.Instantiate(ab.LoadAsset<GameObject>("gtwheel1.prefab"));
-            stick = Object.Instantiate(ab.LoadAsset<GameObject>("gtstick.prefab"));
-            ladica = Object.Instantiate(ab.LoadAsset<GameObject>("ladica.prefab"));
+            GameObject gameObject1 = ab.LoadAsset<GameObject>("gtcolumn.prefab") as GameObject;
+            GameObject gameObject2 = ab.LoadAsset<GameObject>("gtconsole.prefab") as GameObject;
+            GameObject gameObject3 = ab.LoadAsset<GameObject>("gtmeters.prefab") as GameObject;
+            GameObject gameObject4 = ab.LoadAsset<GameObject>("gtwheel.prefab") as GameObject;
+            GameObject gameObject5 = ab.LoadAsset<GameObject>("gtwheel1.prefab") as GameObject;
+            GameObject gameObject6 = ab.LoadAsset<GameObject>("gtstick.prefab") as GameObject;
+            GameObject gameObject7 = ab.LoadAsset<GameObject>("ladica.prefab") as GameObject;
+            column = Object.Instantiate(gameObject1);
+            console = Object.Instantiate(gameObject2);
+            meters = Object.Instantiate(gameObject3);
+            gwheel = Object.Instantiate(gameObject4);
+            gwheel1 = Object.Instantiate(gameObject5);
+            stick = Object.Instantiate(gameObject6);
+            ladica = Object.Instantiate(gameObject7);
+            Object.Destroy(gameObject1);
+            Object.Destroy(gameObject2);
+            Object.Destroy(gameObject3);
+            Object.Destroy(gameObject4);
+            Object.Destroy(gameObject5);
+            Object.Destroy(gameObject6);
+            Object.Destroy(gameObject7);
             ab.Unload(false);
 
             //panel doorf left
@@ -84,7 +98,8 @@ namespace GT_Interior
                 GameObject.Find("SATSUMA(557kg, 248)/Dashboard/pivot_dashboard/dashboard(Clone)").GetComponent<MeshRenderer>().material = gtdash;
             }
             var mettt = GameObject.Find("dashboard meters(Clone)");
-            mettt.GetComponent<MeshRenderer>().enabled = false;
+            //mettt.GetComponent<MeshRenderer>().enabled = false;
+            Object.Destroy(mettt.GetComponent<MeshRenderer>());
             meters.transform.SetParent(mettt.transform, false);
             meters.transform.localPosition = new Vector3(0f, 0f, 0f);
             meters.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
@@ -93,7 +108,8 @@ namespace GT_Interior
             if (trigg.activeSelf)
             {
                 var colll = GameObject.Find("CARPARTS/PartsCar").transform.Find("steering column(Clone)").gameObject;
-                colll.GetComponent<MeshRenderer>().enabled = false;
+                //colll.GetComponent<MeshRenderer>().enabled = false;
+                Object.Destroy(colll.GetComponent<MeshRenderer>());
                 column.transform.SetParent(colll.transform, false);
                 column.transform.localPosition = new Vector3(0f, 0f, 0f);
                 column.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
@@ -101,13 +117,15 @@ namespace GT_Interior
             else
             {
                 var colll1 = GameObject.Find("SATSUMA(557kg, 248)/Dashboard/Steering/steering_column2");
-                colll1.GetComponent<MeshRenderer>().enabled = false;
+                //colll1.GetComponent<MeshRenderer>().enabled = false;
+                Object.Destroy(colll1.GetComponent<MeshRenderer>());
                 column.transform.SetParent(colll1.transform, false);
                 column.transform.localPosition = new Vector3(0f, 0f, 0f);
                 column.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             }
             var whh = GameObject.Find("gt steering wheel(Clone)");
-            whh.GetComponent<MeshRenderer>().enabled = false;
+            //whh.GetComponent<MeshRenderer>().enabled = false;
+            Object.Destroy(whh.GetComponent<MeshRenderer>());
             gwheel.transform.SetParent(whh.transform, false);
             gwheel.transform.localPosition = new Vector3(0f, 0f, 0f);
             gwheel.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
@@ -116,19 +134,22 @@ namespace GT_Interior
             gwheel1.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
 
             var con = GameObject.Find("SATSUMA(557kg, 248)/Dashboard").transform.FindChild("center console gt(xxxxx)");
-            con.GetComponent<MeshRenderer>().enabled = false;
+            //con.GetComponent<MeshRenderer>().enabled = false;
+            Object.Destroy(con.GetComponent<MeshRenderer>());
             console.transform.SetParent(con.transform, false);
             console.transform.localPosition = new Vector3(0f, 0f, 0f);
             console.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
 
             var ss = GameObject.Find("SATSUMA(557kg, 248)/Dashboard").transform.FindChild("center console gt(xxxxx)/GearLever/Pivot/Lever/gear_stick");
-            ss.GetComponent<MeshRenderer>().enabled = false;
+            //ss.GetComponent<MeshRenderer>().enabled = false;
+            Object.Destroy(ss.GetComponent<MeshRenderer>());
             stick.transform.SetParent(ss.transform, false);
             stick.transform.localPosition = new Vector3(0f, 0f, 0f);
             stick.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
 
             var lad = GameObject.Find("dashboard(Clone)/glovbox");
-            lad.GetComponent<MeshRenderer>().enabled = false;
+            //lad.GetComponent<MeshRenderer>().enabled = false;
+            Object.Destroy(lad.GetComponent<MeshRenderer>());
             ladica.transform.SetParent(lad.transform, false);
             ladica.transform.localPosition = new Vector3(0f, 0f, 0f);
             ladica.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
