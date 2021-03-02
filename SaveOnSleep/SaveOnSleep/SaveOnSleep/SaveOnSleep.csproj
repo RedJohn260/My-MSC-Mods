@@ -7,8 +7,8 @@
     <ProjectGuid>{2CEAE666-CBA5-4FA6-AEE3-D6C5CFB2DE20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MSCSC</RootNamespace>
-    <AssemblyName>MSCSC</AssemblyName>
+    <RootNamespace>SaveOnSleep</RootNamespace>
+    <AssemblyName>SaveOnSleep</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
@@ -31,11 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="MSCLoader">
       <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\MSCLoader.dll</HintPath>
     </Reference>
-    <Reference Include="PlayMaker, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="PlayMaker">
       <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\PlayMaker.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -47,27 +52,14 @@
     <Reference Include="UnityEngine">
       <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\SteamLibrary\steamapps\common\My Summer Car\mysummercar_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContainCommands.cs" />
-    <Compile Include="ExecuteCommands.cs" />
-    <Compile Include="CapitalizeString.cs" />
-    <Compile Include="Clock24h.cs" />
-    <Compile Include="CommandEnumerators.cs" />
-    <Compile Include="ConsoleCommands.cs" />
-    <Compile Include="Coroutines.cs" />
-    <Compile Include="GetEngines.cs" />
-    <Compile Include="GetHorns.cs" />
-    <Compile Include="GetLights.cs" />
-    <Compile Include="MSCSC.cs" />
+    <Compile Include="SaveOnSleepBehavior.cs" />
+    <Compile Include="SaveOnSleep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveData.cs" />
-    <Compile Include="SaveUtility.cs" />
-    <Compile Include="SocketConnect.cs" />
-    <Compile Include="GetFireworks.cs" />
-    <Compile Include="UnflipCommands.cs" />
-    <Compile Include="VehicleNames.cs" />
-    <Compile Include="VehiclesEnum.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
