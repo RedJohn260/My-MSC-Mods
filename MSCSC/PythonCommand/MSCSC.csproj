@@ -59,6 +59,7 @@
     <Compile Include="GetEngines.cs" />
     <Compile Include="GetHorns.cs" />
     <Compile Include="GetLights.cs" />
+    <Compile Include="GetWipers.cs" />
     <Compile Include="MSCSC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveData.cs" />

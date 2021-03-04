@@ -134,5 +134,12 @@ namespace MSCSC
             yield return new WaitForSeconds(20f);
             UFO.SetActive(false);
         }
+
+        // Command19 Enumerator
+        public static IEnumerator EnumCom19(FsmString player_current_vehicle)
+        {
+            ExecuteCommands.ExCom19(player_current_vehicle);
+            yield return new WaitForSeconds(wait_seconds);
+        }
     }
 }

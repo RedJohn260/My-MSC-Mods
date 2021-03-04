@@ -25,5 +25,6 @@ namespace MSCSC
         public static string command16 = "train";
         public static string command17 = "phone";
         public static string command18 = "ufo";
+        public static string command19 = "wiper";
     }
 }

@@ -110,6 +110,7 @@ namespace MSCSC
             TrainHorn();
             PhoneRing();
             SpawnUFO();
+            TurnOnWipers();
         }
 
         //Command1
@@ -309,6 +310,17 @@ namespace MSCSC
                 if (SocketConnect.recievedMessage.Contains(ContainCommands.command18))
                 {
                     cor.Command18();
+                }
+            }
+        }
+
+        private void TurnOnWipers()
+        {
+            if (SocketConnect.message_recieved)
+            {
+                if (SocketConnect.recievedMessage.Contains(ContainCommands.command19))
+                {
+                    cor.Command19();
                 }
             }
         }

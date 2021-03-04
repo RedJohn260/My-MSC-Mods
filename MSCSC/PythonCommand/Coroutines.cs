@@ -180,5 +180,11 @@ namespace MSCSC
         {
             StartCoroutine(CommandEnumerators.EnumCom18(UFO, PLAYER));
         }
+
+        //Command19Coroutine
+        public void Command19()
+        {
+            StartCoroutine(CommandEnumerators.EnumCom19(player_current_vehicle));
+        }
     }
 }

@@ -634,5 +634,97 @@ namespace MSCSC
             }
             SocketConnect.message_recieved = false;
         }
+
+        //com19
+        public static void ExCom19(FsmString player_current_vehicle)
+        {
+            try
+            {
+                // If not in vehicle
+                if (player_current_vehicle.Value == "" || player_current_vehicle.Value == null)
+                {
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Player not in vehicle!</color>");
+                    SocketConnect.SendData("Player not in vehicle!");
+                }
+                // satsuma
+                else if (player_current_vehicle.Value == VehiclesEnum.Satsuma.ToString())
+                {
+                    bool dash_trigger = GameObject.Find("SATSUMA(557kg, 248)/Dashboard").transform.FindChild("trigger_dashboard").gameObject.activeInHierarchy;
+                    bool meters_trigger = GameObject.Find("SATSUMA(557kg, 248)/Dashboard/pivot_dashboard/dashboard(Clone)").transform.FindChild("trigger_meters").gameObject.activeInHierarchy;
+                    bool power = GameObject.Find("SATSUMA(557kg, 248)/Electricity").transform.FindChild("PowerON").gameObject.activeInHierarchy;
+
+                    if (power == true)
+                    {
+                        if (dash_trigger == false)
+                        {
+                            if (meters_trigger == false)
+                            {
+                                GetWipers.Wipers(VehiclesEnum.Satsuma).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
+                                ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Satsuma Wipers Activated!</color>");
+                                SocketConnect.SendData("Satsuma Wipers Activated!");
+                            }
+                            else
+                            {
+                                ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Car DashboardMeters not installed!</color>");
+                                SocketConnect.SendData("Car Dashboard not installed!");
+                            }
+                        }
+                        else
+                        {
+                            ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Car Dashboard not installed!</color>");
+                            SocketConnect.SendData("Car Dashboard not installed!");
+                        }
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>No key in the ignition!</color>");
+                        SocketConnect.SendData("No key in the ignition!");
+                    }
+                }
+
+                //hayosiko
+                else if (player_current_vehicle.Value == VehiclesEnum.Hayosiko.ToString())
+                {
+                    GetWipers.Wipers(VehiclesEnum.Hayosiko).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Hayosiko Wipers Activated!</color>");
+                    SocketConnect.SendData("Hayosiko Wipers Activated!");
+                }
+                else if (player_current_vehicle.Value == VehiclesEnum.Ruscko.ToString())
+                {
+                    GetWipers.Wipers(VehiclesEnum.Ruscko).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ruscko Wipers Activated!</color>");
+                    SocketConnect.SendData("Ruscko Wipers Activated!");
+                }
+
+                //gifu
+                else if (player_current_vehicle.Value == VehiclesEnum.Gifu.ToString())
+                {
+                    GetWipers.Wipers(VehiclesEnum.Gifu).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Gifu Wipers Activated!</color>");
+                    SocketConnect.SendData("Gifu Wipers Activated!");
+                }
+
+                //ferndale
+                else if (player_current_vehicle.Value == VehiclesEnum.Ferndale.ToString())
+                {
+                    GetWipers.Wipers(VehiclesEnum.Ferndale).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ferndale Wipers Activated!</color>");
+                    SocketConnect.SendData("Ferndale Wipers Activated!");
+                }
+
+                //kekmet
+                else if (player_current_vehicle.Value == VehiclesEnum.Kekmet.ToString())
+                {
+                    GetWipers.Wipers(VehiclesEnum.Kekmet).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet Wipers Activated!</color>");
+                    SocketConnect.SendData("Kekmet Wipers Activated!");
+                }
+            }
+            catch (Exception e)
+            {
+                ModConsole.Error(e.Message.ToString());
+            }
+            SocketConnect.message_recieved = false;
+        }
     }
 }
