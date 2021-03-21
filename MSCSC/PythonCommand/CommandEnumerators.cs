@@ -31,43 +31,43 @@ namespace MSCSC
             yield return new WaitForSeconds(wait_seconds);
         }
 
-        public static IEnumerator EnumCom4(GameObject HAYOSIKO, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static IEnumerator EnumCom4(GameObject HAYOSIKO, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
-            ExecuteCommands.ExCom4(HAYOSIKO, min_rot, max_rot, unflip_height, unflip_speed);
+            ExecuteCommands.ExCom4(HAYOSIKO, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle);
             yield return new WaitForSeconds(wait_seconds);
         }
 
-        public static IEnumerator EnumCom5(GameObject SATSUMA, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static IEnumerator EnumCom5(GameObject SATSUMA, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
-            ExecuteCommands.ExCom5(SATSUMA, min_rot, max_rot, unflip_height, unflip_speed);
+            ExecuteCommands.ExCom5(SATSUMA, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle);
             yield return new WaitForSeconds(wait_seconds);
         }
 
         // Command6 Enumerator
-        public static IEnumerator EnumCom6(GameObject RUSCKO, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static IEnumerator EnumCom6(GameObject RUSCKO, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
-            ExecuteCommands.ExCom6(RUSCKO, min_rot, max_rot, unflip_height, unflip_speed);
+            ExecuteCommands.ExCom6(RUSCKO, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle);
             yield return new WaitForSeconds(wait_seconds);
         }
 
         // Command7 Enumerator
-        public static IEnumerator EnumCom7(GameObject GIFU, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static IEnumerator EnumCom7(GameObject GIFU, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
-            ExecuteCommands.ExCom7(GIFU, min_rot, max_rot, unflip_height, unflip_speed);
+            ExecuteCommands.ExCom7(GIFU, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle);
             yield return new WaitForSeconds(wait_seconds);
         }
 
         // Command8 Enumerator
-        public static IEnumerator EnumCom8(GameObject FERNDALE, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static IEnumerator EnumCom8(GameObject FERNDALE, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
-            ExecuteCommands.ExCom8(FERNDALE, min_rot, max_rot, unflip_height, unflip_speed);
+            ExecuteCommands.ExCom8(FERNDALE, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle);
             yield return new WaitForSeconds(wait_seconds);
         }
 
         // Command9 Enumerator
-        public static IEnumerator EnumCom9(GameObject KEKMET, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static IEnumerator EnumCom9(GameObject KEKMET, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
-            ExecuteCommands.ExCom9(KEKMET, min_rot, max_rot, unflip_height, unflip_speed);
+            ExecuteCommands.ExCom9(KEKMET, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle);
             yield return new WaitForSeconds(wait_seconds);
         }
 

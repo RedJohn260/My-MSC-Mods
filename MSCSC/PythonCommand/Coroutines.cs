@@ -12,7 +12,7 @@ namespace MSCSC
         private GameObject ALARM;
         private FsmString player_current_vehicle;
         private float unflip_speed = 5000f;
-        private float unflip_height = 3f;
+        private float unflip_height = 20f;
         private float min_rot = 5;
         private float max_rot = 355;
         private GameObject SATSUMA;
@@ -94,37 +94,37 @@ namespace MSCSC
 
         public void Command4()
         {
-            StartCoroutine(CommandEnumerators.EnumCom4(HAYOSIKO, min_rot, max_rot, unflip_height, unflip_speed));
+            StartCoroutine(CommandEnumerators.EnumCom4(HAYOSIKO, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle));
         }
 
         public void Command5()
         {
-            StartCoroutine(CommandEnumerators.EnumCom5(SATSUMA, min_rot, max_rot, unflip_height, unflip_speed));
+            StartCoroutine(CommandEnumerators.EnumCom5(SATSUMA, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle));
         }
 
         //Command6 Coroutine
         public void Command6()
         {
-            StartCoroutine(CommandEnumerators.EnumCom6(RUSCKO, min_rot, max_rot, unflip_height, unflip_speed));
+            StartCoroutine(CommandEnumerators.EnumCom6(RUSCKO, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle));
         }
 
         //Command7 Coroutine
         public void Command7()
         {
-            StartCoroutine(CommandEnumerators.EnumCom7(GIFU, min_rot, max_rot, unflip_height, unflip_speed));
+            StartCoroutine(CommandEnumerators.EnumCom7(GIFU, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle));
         }
 
         //Command8 Coroutine
         public void Command8()
         {
-            StartCoroutine(CommandEnumerators.EnumCom8(FERNDALE, min_rot, max_rot, unflip_height, unflip_speed));
+            StartCoroutine(CommandEnumerators.EnumCom8(FERNDALE, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle));
         }
 
 
         //Command9 Coroutine
         public void Command9()
         {
-            StartCoroutine(CommandEnumerators.EnumCom9(KEKMET, min_rot, max_rot, unflip_height, unflip_speed));
+            StartCoroutine(CommandEnumerators.EnumCom9(KEKMET, min_rot, max_rot, unflip_height, unflip_speed, player_current_vehicle));
         }
 
         //Command10 Coroutine

@@ -65,11 +65,28 @@ namespace MSCSC
                     ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Horn Activated!</color>");
                     SocketConnect.SendData("Horn Activated!");
                 }
+                // Jonnez
+                else if (player_current_vehicle.Value == VehiclesEnum.Jonnez.ToString())
+                {
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Jonnez don't have a horn!</color>");
+                    SocketConnect.SendData("Jonnez don't have a horn :(");
+                }
+                //Kekmet
+                else if (player_current_vehicle.Value == VehiclesEnum.Kekmet.ToString())
+                {
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet don't have a horn!</color>");
+                    SocketConnect.SendData("Kekmet don't have a horn :(");
+                }
                 // If Not In Vehicle
                 else if (player_current_vehicle.Value == "" || player_current_vehicle.Value == null)
                 {
                     ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Player not in vehicle!</color>");
                     SocketConnect.SendData("Player not in vehicle!");
+                }
+                else
+                {
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Some horn condition is not met!</color>");
+                    SocketConnect.SendData("Some horn condition is not met ResidentSleeper");
                 }
             }
             catch (Exception e)
@@ -216,23 +233,31 @@ namespace MSCSC
         }
 
         //com4
-        public static void ExCom4( GameObject HAYOSIKO, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static void ExCom4( GameObject HAYOSIKO, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
             try
             {
-                Vector3 HAYOSIKO_POS = HAYOSIKO.transform.position;
-                Vector3 HAYOSIKO_ROT = HAYOSIKO.transform.localEulerAngles;
-                if (HAYOSIKO_ROT.z > min_rot && HAYOSIKO_ROT.z < max_rot)
+                if (player_current_vehicle.Value == "")
                 {
-                    HAYOSIKO.transform.position = new Vector3(HAYOSIKO_POS.x, unflip_height, HAYOSIKO_POS.z);
-                    HAYOSIKO.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Hayosiko Flipped!</color>");
-                    SocketConnect.SendData("Hayosiko Flipped!");
+                    Vector3 HAYOSIKO_POS = HAYOSIKO.transform.position;
+                    Vector3 HAYOSIKO_ROT = HAYOSIKO.transform.localEulerAngles;
+                    if (HAYOSIKO_ROT.z > min_rot && HAYOSIKO_ROT.z < max_rot)
+                    {
+                        HAYOSIKO.transform.position = new Vector3(HAYOSIKO_POS.x, unflip_height, HAYOSIKO_POS.z);
+                        HAYOSIKO.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Hayosiko Flipped!</color>");
+                        SocketConnect.SendData("Hayosiko Flipped!");
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Hayosiko is not flipped!</color>");
+                        SocketConnect.SendData("Hayosiko is not flipped!");
+                    }
                 }
                 else
                 {
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Hayosiko is not flipped!</color>");
-                    SocketConnect.SendData("Hayosiko is not flipped!");
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Unable to flip while player in vehicle!</color>");
+                    SocketConnect.SendData("Player needs to be out side the vehicle to unflip!");
                 }
             }
             catch (Exception e)
@@ -243,23 +268,31 @@ namespace MSCSC
         }
 
         //com 5
-        public static void ExCom5(GameObject SATSUMA, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static void ExCom5(GameObject SATSUMA, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
             try
             {
-                Vector3 SATSUMA_POS = SATSUMA.transform.position;
-                Vector3 SATSUMA_ROT = SATSUMA.transform.localEulerAngles;
-                if (SATSUMA_ROT.z > min_rot && SATSUMA_ROT.z < max_rot)
+                if (player_current_vehicle.Value == "")
                 {
-                    SATSUMA.transform.position = new Vector3(SATSUMA_POS.x, unflip_height, SATSUMA_POS.z);
-                    SATSUMA.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Satsuma Flipped!</color>");
-                    SocketConnect.SendData("Satsuma Flipped!");
+                    Vector3 SATSUMA_POS = SATSUMA.transform.position;
+                    Vector3 SATSUMA_ROT = SATSUMA.transform.localEulerAngles;
+                    if (SATSUMA_ROT.z > min_rot && SATSUMA_ROT.z < max_rot)
+                    {
+                        SATSUMA.transform.position = new Vector3(SATSUMA_POS.x, unflip_height, SATSUMA_POS.z);
+                        SATSUMA.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Satsuma Flipped!</color>");
+                        SocketConnect.SendData("Satsuma Flipped!");
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Satsuma is not flipped!</color>");
+                        SocketConnect.SendData("Satsuma is not flipped!");
+                    }
                 }
                 else
                 {
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Satsuma is not flipped!</color>");
-                    SocketConnect.SendData("Satsuma is not flipped!");
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Unable to flip while player in vehicle!</color>");
+                    SocketConnect.SendData("Player needs to be out side the vehicle to unflip!");
                 }
             }
             catch (Exception e)
@@ -270,24 +303,32 @@ namespace MSCSC
         }
 
         //Command6 Execute
-        public static void ExCom6(GameObject RUSCKO, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static void ExCom6(GameObject RUSCKO, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
             try
             {
-                //Ruscko
-                Vector3 RUSCKO_POS = RUSCKO.transform.position;
-                Vector3 RUSCKO_ROT = RUSCKO.transform.localEulerAngles;
-                if (RUSCKO_ROT.z > min_rot && RUSCKO_ROT.z < max_rot)
+                if (player_current_vehicle.Value == "")
                 {
-                    RUSCKO.transform.position = new Vector3(RUSCKO_POS.x, unflip_height, RUSCKO_POS.z);
-                    RUSCKO.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ruscko Flipped!</color>");
-                    SocketConnect.SendData("Ruscko Flipped!");
+                    //Ruscko
+                    Vector3 RUSCKO_POS = RUSCKO.transform.position;
+                    Vector3 RUSCKO_ROT = RUSCKO.transform.localEulerAngles;
+                    if (RUSCKO_ROT.z > min_rot && RUSCKO_ROT.z < max_rot)
+                    {
+                        RUSCKO.transform.position = new Vector3(RUSCKO_POS.x, unflip_height, RUSCKO_POS.z);
+                        RUSCKO.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ruscko Flipped!</color>");
+                        SocketConnect.SendData("Ruscko Flipped!");
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ruscko is not flipped!</color>");
+                        SocketConnect.SendData("Ruscko is not flipped!");
+                    }
                 }
                 else
                 {
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ruscko is not flipped!</color>");
-                    SocketConnect.SendData("Ruscko is not flipped!");
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Unable to flip while player in vehicle!</color>");
+                    SocketConnect.SendData("Player needs to be out side the vehicle to unflip!");
                 }
             }
             catch (Exception e)
@@ -298,25 +339,33 @@ namespace MSCSC
         }
 
         //Command7 Execute
-        public static void ExCom7(GameObject GIFU, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static void ExCom7(GameObject GIFU, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
 
             try
             {
-                //Gifu
-                Vector3 GIFU_POS = GIFU.transform.position;
-                Vector3 GIFU_ROT = GIFU.transform.localEulerAngles;
-                if (GIFU_ROT.z > min_rot && GIFU_ROT.z < max_rot)
+                if (player_current_vehicle.Value == "")
                 {
-                    GIFU.transform.position = new Vector3(GIFU_POS.x, unflip_height, GIFU_POS.z);
-                    GIFU.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Gifu Flipped!</color>");
-                    SocketConnect.SendData("Gifu Flipped!");
+                    //Gifu
+                    Vector3 GIFU_POS = GIFU.transform.position;
+                    Vector3 GIFU_ROT = GIFU.transform.localEulerAngles;
+                    if (GIFU_ROT.z > min_rot && GIFU_ROT.z < max_rot)
+                    {
+                        GIFU.transform.position = new Vector3(GIFU_POS.x, unflip_height, GIFU_POS.z);
+                        GIFU.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Gifu Flipped!</color>");
+                        SocketConnect.SendData("Gifu Flipped!");
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Gifu is not flipped!</color>");
+                        SocketConnect.SendData("Gifu is not flipped!");
+                    }
                 }
                 else
                 {
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Gifu is not flipped!</color>");
-                    SocketConnect.SendData("Gifu is not flipped!");
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Unable to flip while player in vehicle!</color>");
+                    SocketConnect.SendData("Player needs to be out side the vehicle to unflip!");
                 }
             }
             catch (Exception e)
@@ -327,25 +376,33 @@ namespace MSCSC
         }
 
         //Command8 Execute
-        public static void ExCom8(GameObject FERNDALE, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static void ExCom8(GameObject FERNDALE, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
 
             try
             {
-                //Ferndale
-                Vector3 FERNDALE_POS = FERNDALE.transform.position;
-                Vector3 FERNDALE_ROT = FERNDALE.transform.localEulerAngles;
-                if (FERNDALE_ROT.z > min_rot && FERNDALE_ROT.z < max_rot)
+                if (player_current_vehicle.Value == "")
                 {
-                    FERNDALE.transform.position = new Vector3(FERNDALE_POS.x, unflip_height, FERNDALE_POS.z);
-                    FERNDALE.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ferndale Flipped!</color>");
-                    SocketConnect.SendData("Ferndale Flipped!");
+                    //Ferndale
+                    Vector3 FERNDALE_POS = FERNDALE.transform.position;
+                    Vector3 FERNDALE_ROT = FERNDALE.transform.localEulerAngles;
+                    if (FERNDALE_ROT.z > min_rot && FERNDALE_ROT.z < max_rot)
+                    {
+                        FERNDALE.transform.position = new Vector3(FERNDALE_POS.x, unflip_height, FERNDALE_POS.z);
+                        FERNDALE.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ferndale Flipped!</color>");
+                        SocketConnect.SendData("Ferndale Flipped!");
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ferndale is not flipped!</color>");
+                        SocketConnect.SendData("Ferndale is not flipped!");
+                    }
                 }
                 else
                 {
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Ferndale is not flipped!</color>");
-                    SocketConnect.SendData("Ferndale is not flipped!");
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Unable to flip while player in vehicle!</color>");
+                    SocketConnect.SendData("Player needs to be out side the vehicle to unflip!");
                 }
             }
             catch (Exception e)
@@ -356,24 +413,32 @@ namespace MSCSC
         }
 
         //Command9 Execute
-        public static void ExCom9(GameObject KEKMET, float min_rot, float max_rot, float unflip_height, float unflip_speed)
+        public static void ExCom9(GameObject KEKMET, float min_rot, float max_rot, float unflip_height, float unflip_speed, FsmString player_current_vehicle)
         {
             try
             {
-                //Kekmet
-                Vector3 KEKMET_POS = KEKMET.transform.position;
-                Vector3 KEKMET_ROT = KEKMET.transform.localEulerAngles;
-                if (KEKMET_ROT.z > min_rot && KEKMET_ROT.z < max_rot)
+                if (player_current_vehicle.Value == "")
                 {
-                    KEKMET.transform.position = new Vector3(KEKMET_POS.x, unflip_height, KEKMET_POS.z);
-                    KEKMET.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet Flipped!</color>");
-                    SocketConnect.SendData("Kekmet Flipped!");
+                    //Kekmet
+                    Vector3 KEKMET_POS = KEKMET.transform.position;
+                    Vector3 KEKMET_ROT = KEKMET.transform.localEulerAngles;
+                    if (KEKMET_ROT.z > min_rot && KEKMET_ROT.z < max_rot)
+                    {
+                        KEKMET.transform.position = new Vector3(KEKMET_POS.x, unflip_height, KEKMET_POS.z);
+                        KEKMET.transform.Rotate(Vector3.forward * unflip_speed * Time.deltaTime);
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet Flipped!</color>");
+                        SocketConnect.SendData("Kekmet Flipped!");
+                    }
+                    else
+                    {
+                        ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet is not flipped!</color>");
+                        SocketConnect.SendData("Kekmet is not flipped!");
+                    }
                 }
                 else
                 {
-                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet is not flipped!</color>");
-                    SocketConnect.SendData("Kekmet is not flipped!");
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Unable to flip while player in vehicle!</color>");
+                    SocketConnect.SendData("Player needs to be out side the vehicle to unflip!");
                 }
             }
             catch (Exception e)
@@ -718,6 +783,17 @@ namespace MSCSC
                     GetWipers.Wipers(VehiclesEnum.Kekmet).GetComponents<PlayMakerFSM>()[1].FsmVariables.FindFsmBool("On").Value = true;
                     ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Kekmet Wipers Activated!</color>");
                     SocketConnect.SendData("Kekmet Wipers Activated!");
+                }
+                //Jonnez
+                else if (player_current_vehicle.Value == VehiclesEnum.Jonnez.ToString())
+                {
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Jonnez don't have a wipers!</color>");
+                    SocketConnect.SendData("Jonnez don't have a wipers :(");
+                }
+                else
+                {
+                    ModConsole.Print("<color=yellow>[MSCSC]: </color><color=white>Some wiper condition is not met!</color>");
+                    SocketConnect.SendData("Some wiper condition is not met ResidentSleeper");
                 }
             }
             catch (Exception e)
