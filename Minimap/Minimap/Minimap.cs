@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using HutongGames.PlayMaker;
 using MSCLoader;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace Minimap
 		public override string ID => "Minimap"; //Your mod ID (unique)
 		public override string Name => "Minimap"; //You mod name
 		public override string Author => "RedJohn260"; //Your Username
-		public override string Version => "1.0.3"; //Version
+		public override string Version => "1.0.4"; //Version
 
 		// Set this to true if you will be load custom assets from Assets folder.
 		// This will create subfolder in Assets folder for your mod.
@@ -21,6 +22,26 @@ namespace Minimap
 		public override bool LoadInMenu => true;
 		public override bool SecondPass => true;
 
+        #region "Changes with pdate to ver 1.0.4", "At 07/07/2021"
+        private static string modName = typeof(Minimap).Namespace;
+		private static string path = Path.Combine(Application.persistentDataPath, modName + ".xml");
+		private Settings resetButton = new Settings("LCD Display Reset", "Reset", DeleteXMLSettings);
+        
+        public static void DeleteXMLSettings()
+		{
+			File.Delete(path);
+		}
+
+		public override void ModSettings()
+        {
+			Settings.AddText(this, "This button deletes mod save file.");
+			Settings.AddText(this, "Warrnig: Mod save file can't be recovered.");
+			Settings.AddText(this, "Use it to reset Mod");
+			Settings.AddButton(this, resetButton);
+		}
+		#endregion
+
+		#region "Unchanged code prior to v1.0.4"
 		public readonly Keybind BigMapShow = new Keybind("ShowMapKey", "ShowMap", KeyCode.LeftControl, KeyCode.Keypad5);
 		public readonly Keybind EnableMinimap = new Keybind("EnableMinimapKey", "Enable/Disable Minimap", KeyCode.LeftControl, KeyCode.Keypad9);
 		private AssetBundle ab;
@@ -151,9 +172,7 @@ namespace Minimap
 		private bool IsTangerineInstalled;
 		private JunkCarIcons JunkCarIcons = new JunkCarIcons();
 		private float currentMinimapZoom;
-
 		
-
 		public void LoadAbGBInstantiate()
 		{
 			ab = LoadAssets.LoadBundle(this, "minimap.unity3d");
@@ -255,13 +274,17 @@ namespace Minimap
 			FollowPlayerCam.player = PLAYER.transform;
 			CloseButton.onClick.AddListener(new UnityAction(OpenBigMap));
 		}
-
-		public void MSCIconGameObjects()
+        #endregion
+        public void MSCIconGameObjects()
 		{
-			BusStop1 = GameObject.Find("MAP/BusStop");
-			BusStop2 = GameObject.Find("MAP/BusStop 1");
-			BusStop3 = GameObject.Find("PERAJARVI/BusStop 2");
-			BusStop4 = GameObject.Find("TRAFFIC/BusStopKesseli");
+			#region "Changes with pdate to ver 1.0.4", "At 07/07/2021"
+			BusStop1 = GameObject.Find("MAP").transform.GetChild(21).gameObject;
+			BusStop2 = GameObject.Find("MAP").transform.GetChild(22).gameObject;
+			BusStop3 = GameObject.Find("PERAJARVI/BusStop");
+            #endregion
+
+            #region "Unchanged code prior to v1.0.4"
+            BusStop4 = GameObject.Find("TRAFFIC/BusStopKesseli");
 			BusStop5 = GameObject.Find("TRAFFIC/BusStopLoppe");
 			BusStop6 = GameObject.Find("TRAFFIC/BusStopRykipohja");
 			Inspection = GameObject.Find("INSPECTION");
@@ -743,7 +766,8 @@ namespace Minimap
 			JunkCarIcons.car3discovered = saveData.JunkCar3Discovered;
 			JunkCarIcons.car4discovered = saveData.JunkCar4Discovered;
 		}
+        #endregion
 
-		
-	}
+
+    }
 }
